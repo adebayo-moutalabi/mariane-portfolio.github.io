@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariane Hounsou — IT Support & Réseaux</title>
+  <meta name="description" content="Mariane Inès Norma Hounsou — Technicienne IT Support & Réseaux basée à Wilmington, DE. Parcours, formations, compétences et projets.">
+  <meta name="theme-color" content="#69001c">
+  <meta property="og:title" content="Mariane Hounsou — IT Support & Réseaux">
+  <meta property="og:description" content="Parcours, formations, compétences et projets de Mariane Inès Norma Hounsou.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Accueil">
+        <span class="mono">MH</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#profil" data-i18n="nav.profile">Profil</a>
+        <a href="#parcours" data-i18n="nav.journey">Parcours</a>
+        <a href="#competences" data-i18n="nav.skills">Compétences</a>
+        <a href="#formations" data-i18n="nav.education">Formations</a>
+        <a href="#projets" data-i18n="nav.projects">Projets</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="lang" id="langToggle" aria-label="Changer de langue / Switch language">
+          <span data-lang="fr">FR</span><span data-lang="en">EN</span>
+        </button>
+        <a href="#contact" class="btn btn--small btn--gold magnetic" data-i18n="nav.contact">Contact</a>
+        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#profil" data-i18n="nav.profile">Profil</a>
+      <a href="#parcours" data-i18n="nav.journey">Parcours</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#formations" data-i18n="nav.education">Formations</a>
+      <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <canvas class="hero__canvas" id="netCanvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow reveal-up"><span class="dot"></span> <span data-i18n="hero.eyebrow">Wilmington, Delaware · Disponible pour de nouvelles opportunités</span></p>
+        <h1 class="hero__title">
+          <span class="line"><span class="word">Mariane</span></span>
+          <span class="line"><span class="word serif">Inès Norma</span></span>
+          <span class="line"><span class="word">Hounsou<span class="accent">.</span></span></span>
+        </h1>
+        <p class="hero__role reveal-up">
+          <span data-i18n="hero.role">Technicienne</span>
+          <span class="rotator" aria-live="polite"><span class="rotator__item" id="rotator">IT Support</span></span>
+        </p>
+        <div class="hero__cta reveal-up">
+          <a href="#parcours" class="btn btn--gold magnetic" data-i18n="hero.cta1">Découvrir mon parcours</a>
+          <a href="#contact" class="btn btn--ghost magnetic" data-i18n="hero.cta2">Me contacter</a>
+        </div>
+      </div>
+      <a href="#profil" class="scroll-hint" aria-label="Défiler">
+        <span class="scroll-hint__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ========== STATEMENT (scroll highlight) ========== -->
+    <section class="statement" id="profil">
+      <div class="container">
+        <p class="eyebrow eyebrow--wine" data-i18n="profile.eyebrow">Profil</p>
+        <p class="statement__text" id="statement" data-i18n="profile.text">Je rends la technologie fiable, simple et humaine. Technicienne IT Support et Réseaux, j'installe, je configure et je dépanne — du poste de travail au routeur — pour que chaque utilisateur puisse se concentrer sur l'essentiel.</p>
+      </div>
+    </section>
+
+    <!-- ========== STATS ========== -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="3">0</span>
+          <span class="stat__label" data-i18n="stats.exp">expériences professionnelles en IT</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2">0</span>
+          <span class="stat__label" data-i18n="stats.countries">pays — Bénin &amp; États-Unis</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2">0</span>
+          <span class="stat__label" data-i18n="stats.degrees">diplômes universitaires — dont un en cours</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2">0</span>
+          <span class="stat__label" data-i18n="stats.langs">langues — Français &amp; Anglais</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE (horizontal pinned scroll) ========== -->
+    <section class="journey" id="parcours">
+      <div class="journey__sticky">
+        <div class="journey__head container">
+          <p class="eyebrow eyebrow--gold" data-i18n="journey.eyebrow">Parcours professionnel</p>
+          <h2 class="h2 h2--light"><span data-i18n="journey.title">Sur le terrain,</span> <em class="serif" data-i18n="journey.titleEm">au service des utilisateurs.</em></h2>
+        </div>
+        <div class="journey__track" id="journeyTrack">
+          <article class="xp-card">
+            <div class="xp-card__top">
+              <span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.current">En poste</span></span>
+              <span class="xp-card__date" data-i18n="xp1.date">Juin 2026 — Aujourd'hui</span>
+            </div>
+            <h3 class="xp-card__role" data-i18n="xp1.role">Associate Support Analyst — Stagiaire</h3>
+            <p class="xp-card__org">Berkley Technology Services (BTS)<span>Wilmington, DE · USA</span></p>
+            <ul class="xp-card__list">
+              <li data-i18n="xp1.b1">Support technique de premier niveau pour les utilisateurs en environnement corporate.</li>
+              <li data-i18n="xp1.b2">Suivi des incidents et gestion des tickets sous ServiceNow.</li>
+              <li data-i18n="xp1.b3">Support des applications Microsoft 365 — Outlook, Teams.</li>
+              <li data-i18n="xp1.b4">Résolution des problèmes d'accès, de mots de passe et de comptes.</li>
+              <li data-i18n="xp1.b5">Documentation des interventions selon les procédures ITSM.</li>
+            </ul>
+            <div class="chips">
+              <span>ServiceNow</span><span>Microsoft 365</span><span>Citrix</span><span>Tanium</span><span>Azure</span><span>Zscaler</span>
+            </div>
+            <span class="xp-card__index">01</span>
+          </article>
+
+          <article class="xp-card xp-card--gold">
+            <div class="xp-card__top">
+              <span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.current">En poste</span></span>
+              <span class="xp-card__date" data-i18n="xp2.date">Octobre 2024 — Aujourd'hui</span>
+            </div>
+            <h3 class="xp-card__role" data-i18n="xp2.role">IT Support</h3>
+            <p class="xp-card__org">Police Athletic League of Wilmington (PALW)<span>Wilmington, DE · USA</span></p>
+            <ul class="xp-card__list">
+              <li data-i18n="xp2.b1">Support sur site pour le personnel : matériel et connectivité réseau.</li>
+              <li data-i18n="xp2.b2">Installation et configuration de routeurs, points d'accès Wi-Fi et imprimantes.</li>
+              <li data-i18n="xp2.b3">Diagnostic des problèmes Internet et de performance système.</li>
+              <li data-i18n="xp2.b4">Mise en service de postes, installation Windows et configuration des sessions.</li>
+            </ul>
+            <div class="chips">
+              <span>Windows 10/11</span><span>Wi-Fi</span><span data-i18n="chips.routers">Routeurs</span><span data-i18n="chips.printers">Imprimantes</span>
+            </div>
+            <span class="xp-card__index">02</span>
+          </article>
+
+          <article class="xp-card xp-card--brown">
+            <div class="xp-card__top">
+              <span class="badge" data-i18n="common.internship">Stage</span>
+              <span class="xp-card__date" data-i18n="xp3.date">Juillet — Août 2022</span>
+            </div>
+            <h3 class="xp-card__role" data-i18n="xp3.role">Stagiaire Réseau</h3>
+            <p class="xp-card__org" data-i18n="xp3.org">Service de Promotion des TIC (SPTIC)<span>Calavi · Bénin</span></p>
+            <ul class="xp-card__list">
+              <li data-i18n="xp3.b1">Configuration de points d'accès Cisco et réinitialisation de routeurs MikroTik.</li>
+              <li data-i18n="xp3.b2">Participation au remplacement de fibre optique et aux diagnostics de connectivité.</li>
+              <li data-i18n="xp3.b3">Résolution d'incidents réseau locaux et distants aux côtés de techniciens seniors.</li>
+            </ul>
+            <div class="chips">
+              <span>Cisco</span><span>MikroTik</span><span data-i18n="chips.fiber">Fibre optique</span>
+            </div>
+            <span class="xp-card__index">03</span>
+          </article>
+
+          <article class="xp-card xp-card--outro">
+            <p class="serif xp-card__quote" data-i18n="journey.outro">« Chaque ticket résolu, c'est une personne qui peut de nouveau avancer. »</p>
+            <a href="#competences" class="btn btn--gold magnetic" data-i18n="journey.next">Voir mes compétences</a>
+          </article>
+        </div>
+        <div class="journey__bar container" aria-hidden="true"><span id="journeyBar"></span></div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS (bento) ========== -->
+    <section class="skills" id="competences">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--wine" data-i18n="skills.eyebrow">Compétences</p>
+          <h2 class="h2"><span data-i18n="skills.title">Une boîte à outils</span> <em class="serif" data-i18n="skills.titleEm">complète.</em></h2>
+        </div>
+
+        <div class="bento">
+          <div class="tile tile--net tile--wide reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-2.5h14V17"/></svg>
+            </div>
+            <h3 data-i18n="skills.net">Réseaux</h3>
+            <p data-i18n="skills.netText">Conception, configuration et dépannage de réseaux locaux et sans fil.</p>
+            <div class="chips chips--wine"><span>TCP/IP</span><span>DHCP</span><span>DNS</span><span>VLANs</span><span data-i18n="chips.cisco">Routeurs Cisco</span><span>Wi-Fi</span><span data-i18n="chips.nettest">Tests réseau</span></div>
+            <svg class="tile__deco" viewBox="0 0 200 120" aria-hidden="true">
+              <g class="deco-lines"><path d="M20 90 L70 40 L120 80 L180 30"/><path d="M70 40 L110 20 L180 30"/><path d="M20 90 L120 80"/></g>
+              <g class="deco-nodes"><circle cx="20" cy="90" r="5"/><circle cx="70" cy="40" r="6"/><circle cx="120" cy="80" r="5"/><circle cx="180" cy="30" r="7"/><circle cx="110" cy="20" r="4"/></g>
+            </svg>
+          </div>
+
+          <div class="tile tile--sys tile--tall reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3 data-i18n="skills.sys">Systèmes &amp; logiciels</h3>
+            <ul class="tile__list">
+              <li>Windows 10 / 11</li>
+              <li>Microsoft 365</li>
+              <li data-i18n="skills.ad">Active Directory — comptes &amp; mots de passe</li>
+              <li>Exchange &amp; Teams</li>
+              <li>Zoom</li>
+            </ul>
+          </div>
+
+          <div class="tile tile--hw reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
+            </div>
+            <h3 data-i18n="skills.hw">Matériel</h3>
+            <p data-i18n="skills.hwText">Imprimantes, scanners, routeurs, switches, PC, tablettes et mobiles.</p>
+          </div>
+
+          <div class="tile tile--ent tile--wide reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12a3.5 3.5 0 0 0 1 7z"/></svg>
+            </div>
+            <h3 data-i18n="skills.ent">Environnement entreprise</h3>
+            <p data-i18n="skills.entText">Outils utilisés au quotidien pour sécuriser et gérer les postes utilisateurs.</p>
+            <div class="logo-row">
+              <span>Citrix Workspace</span><span>Tanium</span><span>Azure</span><span>Zscaler</span><span>ServiceNow</span>
+            </div>
+          </div>
+
+          <div class="tile tile--tools reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+            </div>
+            <h3 data-i18n="skills.tools">Outils</h3>
+            <p>Packet Tracer · GNS3 · ServiceNow · Microsoft Office</p>
+          </div>
+
+          <div class="tile tile--support tile--wide tile--half reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
+            </div>
+            <h3 data-i18n="skills.support">Support utilisateur</h3>
+            <p data-i18n="skills.supportText">Support de niveau 1 : diagnostic, résolution et documentation des incidents selon les procédures ITSM.</p>
+            <div class="chips"><span>ServiceNow</span><span>ITSM</span><span data-i18n="chips.ticketing">Gestion des tickets</span><span>Documentation</span></div>
+          </div>
+
+          <div class="tile tile--lang tile--wide reveal">
+            <div class="tile__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            </div>
+            <h3 data-i18n="skills.langs">Langues</h3>
+            <div class="lang-bars">
+              <div><span data-i18n="skills.fr">Français</span><i style="--w:100%"></i></div>
+              <div><span data-i18n="skills.en">Anglais</span><i style="--w:88%"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOFT SKILLS MARQUEE ========== -->
+    <section class="marquee" aria-label="Savoir-être">
+      <div class="marquee__row">
+        <div class="marquee__track" data-i18n="soft.row1">
+          <span>Résolution de problèmes</span><b>✦</b><span>Travail d'équipe</span><b>✦</b><span>Service client</span><b>✦</b><span>Adaptabilité</span><b>✦</b><span>Gestion du temps</span><b>✦</b><span>Communication</span><b>✦</b>
+        </div>
+      </div>
+      <div class="marquee__row marquee__row--reverse">
+        <div class="marquee__track marquee__track--outline" data-i18n="soft.row2">
+          <span>Écoute</span><b>✦</b><span>Rigueur</span><b>✦</b><span>Curiosité</span><b>✦</b><span>Patience</span><b>✦</b><span>Pédagogie</span><b>✦</b><span>Fiabilité</span><b>✦</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION (stacked sticky cards) ========== -->
+    <section class="education" id="formations">
+      <div class="container education__layout">
+        <div class="education__intro">
+          <p class="eyebrow eyebrow--wine" data-i18n="edu.eyebrow">Formations</p>
+          <h2 class="h2"><span data-i18n="edu.title">Apprendre,</span> <em class="serif" data-i18n="edu.titleEm">de Cotonou à Wilmington.</em></h2>
+          <p class="lead" data-i18n="edu.lead">Une base solide en administration réseau, enrichie par l'informatique, le design et la cybersécurité.</p>
+        </div>
+        <div class="stack" id="stack">
+          <article class="stack__card stack__card--wine">
+            <div class="stack__meta"><span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.ongoing">En cours</span></span><span>USA</span></div>
+            <h3 data-i18n="edu1.title">Bachelor of Science en Informatique</h3>
+            <p class="stack__school">Wilmington University · Delaware</p>
+            <p data-i18n="edu1.text">Approfondissement de l'informatique : programmation, systèmes, réseaux et sécurité.</p>
+            <span class="stack__big">B.Sc.</span>
+          </article>
+          <article class="stack__card stack__card--brown">
+            <div class="stack__meta"><span class="badge" data-i18n="common.graduated">Diplômée · 2023</span><span data-i18n="common.benin">Bénin</span></div>
+            <h3 data-i18n="edu2.title">Licence en Administration Réseaux</h3>
+            <p class="stack__school">ENEAM · Cotonou</p>
+            <p data-i18n="edu2.text">Architecture et administration des réseaux, protocoles, équipements d'interconnexion.</p>
+            <span class="stack__big">2023</span>
+          </article>
+          <article class="stack__card stack__card--gold">
+            <div class="stack__meta"><span class="badge" data-i18n="common.training22">Formation · 2022</span><span data-i18n="common.benin">Bénin</span></div>
+            <h3 data-i18n="edu3.title">UI/UX Design</h3>
+            <p class="stack__school">EIG Bénin</p>
+            <p data-i18n="edu3.text">Conception d'interfaces centrées sur l'utilisateur — un atout pour comprendre ceux que l'on accompagne.</p>
+            <span class="stack__big">UX</span>
+          </article>
+          <article class="stack__card stack__card--ink">
+            <div class="stack__meta"><span class="badge" data-i18n="common.training22">Formation · 2022</span><span data-i18n="common.benin">Bénin</span></div>
+            <h3 data-i18n="edu4.title">Ethical Hacking</h3>
+            <p class="stack__school">AEI-Synergie</p>
+            <p data-i18n="edu4.text">Initiation à la sécurité offensive pour mieux protéger les systèmes et les utilisateurs.</p>
+            <span class="stack__big">Sec</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section class="certs">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--gold" data-i18n="certs.eyebrow">Certifications</p>
+          <h2 class="h2 h2--light"><span data-i18n="certs.title">Toujours</span> <em class="serif" data-i18n="certs.titleEm">en progression.</em></h2>
+        </div>
+        <div class="certs__grid">
+          <div class="cert tilt reveal">
+            <div class="cert__ring" style="--p:100"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>G</span></div>
+            <h3>Google IT Support</h3>
+            <p class="cert__status cert__status--done" data-i18n="certs.done">Obtenue</p>
+          </div>
+          <div class="cert tilt reveal">
+            <div class="cert__ring" style="--p:60"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>CCNA</span></div>
+            <h3>Cisco Certified Network Associate</h3>
+            <p class="cert__status cert__status--progress" data-i18n="certs.progress">En cours</p>
+          </div>
+          <div class="cert tilt reveal">
+            <div class="cert__ring" style="--p:15"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>A+</span></div>
+            <h3>CompTIA A+</h3>
+            <p class="cert__status cert__status--planned" data-i18n="certs.planned">Prévue</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="projects" id="projets">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow--wine" data-i18n="projects.eyebrow">Projets &amp; réalisations</p>
+          <h2 class="h2"><span data-i18n="projects.title">Ce que j'ai</span> <em class="serif" data-i18n="projects.titleEm">construit.</em></h2>
+        </div>
+
+        <div class="projects__list">
+          <article class="project reveal">
+            <div class="project__visual project__visual--wifi">
+              <div class="waves"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag">PALW · 2024 — <span data-i18n="common.today">aujourd'hui</span></span>
+              <h3 data-i18n="p1.title">Infrastructure Wi-Fi &amp; postes de travail</h3>
+              <p data-i18n="p1.text">Installation et configuration des routeurs, points d'accès Wi-Fi et imprimantes, mise en service des postes Windows et des sessions utilisateurs pour une association de Wilmington.</p>
+              <div class="chips"><span>Wi-Fi</span><span>Windows</span><span data-i18n="chips.printers">Imprimantes</span></div>
+            </div>
+          </article>
+
+          <article class="project project--reverse reveal">
+            <div class="project__visual project__visual--lab">
+              <svg viewBox="0 0 300 200" aria-hidden="true">
+                <g class="lab-links"><path d="M150 40 L70 110"/><path d="M150 40 L230 110"/><path d="M70 110 L40 170"/><path d="M70 110 L110 170"/><path d="M230 110 L190 170"/><path d="M230 110 L260 170"/><path d="M70 110 L230 110"/></g>
+                <g class="lab-nodes"><rect x="130" y="25" width="40" height="30" rx="6"/><rect x="50" y="95" width="40" height="30" rx="6"/><rect x="210" y="95" width="40" height="30" rx="6"/><circle cx="40" cy="170" r="11"/><circle cx="110" cy="170" r="11"/><circle cx="190" cy="170" r="11"/><circle cx="260" cy="170" r="11"/></g>
+                <circle class="packet" r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M40 170 L70 110 L150 40 L230 110 L260 170"/></circle>
+                <circle class="packet packet--2" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" path="M190 170 L230 110 L70 110 L110 170"/></circle>
+              </svg>
+            </div>
+            <div class="project__body">
+              <span class="project__tag" data-i18n="p2.tag">Labs CCNA · en cours</span>
+              <h3 data-i18n="p2.title">Labs réseau Cisco</h3>
+              <p data-i18n="p2.text">Simulation de topologies dans Packet Tracer et GNS3 : VLANs, adressage IP, DHCP, DNS et routage Cisco — la préparation pratique à la certification CCNA.</p>
+              <div class="chips"><span>Packet Tracer</span><span>GNS3</span><span>VLANs</span><span>Cisco IOS</span></div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project__visual project__visual--ticket">
+              <div class="tickets">
+                <div class="ticket"><b>INC-1042</b><span data-i18n="p3.t1">Réinitialisation mot de passe</span><em data-i18n="p3.resolved">Résolu</em></div>
+                <div class="ticket"><b>INC-1043</b><span data-i18n="p3.t2">Accès Outlook / Teams</span><em data-i18n="p3.resolved">Résolu</em></div>
+                <div class="ticket"><b>INC-1044</b><span data-i18n="p3.t3">Connexion Citrix</span><em data-i18n="p3.resolved">Résolu</em></div>
+              </div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag">BTS · 2026</span>
+              <h3 data-i18n="p3.title">Support utilisateurs en entreprise</h3>
+              <p data-i18n="p3.text">Traitement des incidents de bout en bout dans ServiceNow : diagnostic, résolution, documentation. Accompagnement des utilisateurs sur Microsoft 365 et les outils sécurisés de l'entreprise.</p>
+              <div class="chips"><span>ServiceNow</span><span>ITSM</span><span>Microsoft 365</span></div>
+            </div>
+          </article>
+
+          <article class="project project--reverse reveal">
+            <div class="project__visual project__visual--fiber">
+              <div class="fiber"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="project__body">
+              <span class="project__tag">SPTIC · 2022</span>
+              <h3 data-i18n="p4.title">Fibre optique &amp; points d'accès</h3>
+              <p data-i18n="p4.text">Participation au remplacement de liaisons fibre, à la configuration de points d'accès Cisco et à la remise en service de routeurs MikroTik au Bénin.</p>
+              <div class="chips"><span data-i18n="chips.fiber">Fibre optique</span><span>Cisco</span><span>MikroTik</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container contact__inner">
+        <p class="eyebrow eyebrow--gold" data-i18n="contact.eyebrow">Contact</p>
+        <h2 class="contact__title"><span data-i18n="contact.title">Travaillons</span><br><em class="serif" data-i18n="contact.titleEm">ensemble.</em></h2>
+        <p class="lead lead--light" data-i18n="contact.lead">Une opportunité, une question ou simplement envie d'échanger ? Mon inbox est ouverte.</p>
+        <a href="mailto:hounsounorma@gmail.com" class="contact__mail magnetic">hounsounorma@gmail.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+        </a>
+        <div class="contact__cards">
+          <button class="contact__card" id="copyMail" type="button">
+            <span class="contact__label" data-i18n="contact.email">E-mail</span>
+            <span class="contact__value">hounsounorma@gmail.com</span>
+            <span class="contact__hint" data-i18n="contact.copy">Cliquer pour copier</span>
+          </button>
+          <div class="contact__card">
+            <span class="contact__label" data-i18n="contact.location">Localisation</span>
+            <span class="contact__value">Wilmington, Delaware</span>
+            <span class="contact__hint" data-i18n="contact.country">États-Unis</span>
+          </div>
+          <div class="contact__card">
+            <span class="contact__label" data-i18n="contact.langs">Langues</span>
+            <span class="contact__value" data-i18n="contact.langsVal">Français · Anglais</span>
+            <span class="contact__hint" data-i18n="contact.bilingual">Bilingue</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year">2026</span> Mariane Inès Norma Hounsou</span>
+      <a href="#top" class="footer__top" data-i18n="footer.top">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -32,7 +32,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; scrollbar-gutter: stable; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 body {
   margin: 0; font-family: var(--font); color: var(--ink); background: var(--cream);
   line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip;

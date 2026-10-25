@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mariane Hounsou — IT Support & Réseaux</title>
-  <meta name="description" content="Mariane Inès Norma Hounsou — Technicienne IT Support & Réseaux à Wilmington, DE. Son histoire, son terrain, ses compétences et ses projets.">
+  <title>Mariane Hounsou | IT Support & Réseaux</title>
+  <meta name="description" content="Mariane Inès Norma Hounsou, technicienne IT Support et Réseaux à Wilmington (Delaware). Quand la technologie lâche, c'est elle qu'on appelle.">
   <meta name="theme-color" content="#69001c">
-  <meta property="og:title" content="Mariane Hounsou — IT Support & Réseaux">
+  <meta property="og:title" content="Mariane Hounsou | IT Support & Réseaux">
   <meta property="og:description" content="L'histoire, les compétences et les projets de Mariane Inès Norma Hounsou.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -29,52 +29,46 @@
   <!-- ===== Global FX ===== -->
   <canvas class="fx" id="fx" aria-hidden="true"></canvas>
   <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
-  <div class="progress" aria-hidden="true"><span></span></div>
-
-  <!-- ===== Nav ===== -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#prologue" class="nav__logo" aria-label="Accueil"><span>MH</span></a>
-      <nav class="nav__links" aria-label="Navigation">
-        <a href="#histoire" data-i18n="nav.story">Histoire</a>
-        <a href="#terrain" data-i18n="nav.field">Terrain</a>
-        <a href="#projets" data-i18n="nav.projects">Projets</a>
-        <a href="#competences" data-i18n="nav.skills">Compétences</a>
-        <a href="#humain" data-i18n="nav.human">Humain</a>
-        <a href="#formations" data-i18n="nav.education">Formations</a>
-      </nav>
-      <div class="nav__actions">
-        <button class="icon-btn" id="termOpen" aria-label="Ouvrir le terminal" title="Terminal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-5-6-5M12 19h8"/></svg>
-        </button>
-        <button class="lang" id="langToggle" aria-label="Langue / Language"><span data-lang="fr">FR</span><span data-lang="en">EN</span></button>
-        <a href="#contact" class="btn btn--wine btn--sm" data-i18n="nav.contact">Contact</a>
-        <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <!-- ===== Island header ===== -->
+  <header class="island" id="island">
+    <div class="island__bar">
+      <a href="#prologue" class="island__logo" aria-label="Mariane Hounsou, accueil">
+        <svg class="logo" viewBox="0 0 56 40" aria-hidden="true">
+          <g class="logo__links"><path d="M6 32 L6 8 L19 22 L32 8 L32 32"/><path d="M32 20 L50 20"/><path d="M50 8 L50 32"/></g>
+          <g class="logo__nodes"><circle cx="6" cy="32" r="3"/><circle cx="6" cy="8" r="3"/><circle cx="32" cy="8" r="3"/><circle cx="32" cy="32" r="3"/><circle cx="50" cy="8" r="3"/><circle cx="50" cy="32" r="3"/></g>
+          <circle class="logo__hub" cx="19" cy="22" r="4.5"/>
+          <circle class="logo__packet" r="2"><animateMotion dur="3.4s" repeatCount="indefinite" path="M6 32 L6 8 L19 22 L32 8 L32 20 L50 20 L50 8"/></circle>
+        </svg>
+      </a>
+      <div class="island__now" aria-live="polite">
+        <span class="island__num" id="nowNum">00</span>
+        <span class="island__label" id="nowWrap"><span id="nowLabel">Prologue</span></span>
       </div>
-    </div>
-    <div class="nav__mobile" id="mobileMenu">
-      <a href="#histoire" data-i18n="nav.story">Histoire</a>
-      <a href="#terrain" data-i18n="nav.field">Terrain</a>
-      <a href="#projets" data-i18n="nav.projects">Projets</a>
-      <a href="#competences" data-i18n="nav.skills">Compétences</a>
-      <a href="#humain" data-i18n="nav.human">Humain</a>
-      <a href="#formations" data-i18n="nav.education">Formations</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <button class="lang" id="langToggle" aria-label="Langue / Language"><span data-lang="fr">FR</span><span data-lang="en">EN</span></button>
+      <button class="island__menu" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+        <svg class="island__ring" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20"/><circle class="island__ring-val" id="ringVal" cx="22" cy="22" r="20"/></svg>
+        <span class="island__bars"><i></i><i></i></span>
+      </button>
     </div>
   </header>
 
-  <!-- ===== Chapter dots ===== -->
-  <nav class="chapters" id="chapters" aria-label="Chapitres">
-    <a href="#prologue" data-label="Prologue"><i></i></a>
-    <a href="#histoire" data-label="01 · Origines" data-i18n-label="ch.1"><i></i></a>
-    <a href="#terrain" data-label="02 · Terrain" data-i18n-label="ch.2"><i></i></a>
-    <a href="#projets" data-label="03 · Projets" data-i18n-label="ch.3"><i></i></a>
-    <a href="#competences" data-label="04 · Compétences" data-i18n-label="ch.4"><i></i></a>
-    <a href="#humain" data-label="05 · Humain" data-i18n-label="ch.5"><i></i></a>
-    <a href="#formations" data-label="06 · Formations" data-i18n-label="ch.6"><i></i></a>
-    <a href="#objectifs" data-label="07 · La suite" data-i18n-label="ch.7"><i></i></a>
-    <a href="#contact" data-label="Épilogue" data-i18n-label="ch.8"><i></i></a>
-  </nav>
+  <!-- ===== Full-screen menu ===== -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__aurora" aria-hidden="true"></div>
+    <div class="menu__inner">
+      <aside class="menu__card">
+        <div class="menu__photo"><img src="assets/img/mariane.jpg" alt="Mariane Hounsou" width="640" height="640" loading="lazy"></div>
+        <p class="menu__name">Mariane Inès Norma <b>Hounsou</b></p>
+        <p class="menu__role" data-i18n="badge.role">Technicienne IT Support &amp; Réseaux</p>
+        <div class="menu__actions">
+          <a href="#contact" class="btn btn--gold btn--sm" data-menu-link data-i18n="nav.contact">Contact</a>
+          <button class="btn btn--glass btn--sm" id="termOpen">Terminal ›_</button>
+        </div>
+        <p class="menu__status"><span class="live"></span><span data-i18n="menu.status">Disponible · Wilmington, DE</span></p>
+      </aside>
+      <nav class="menu__list" aria-label="Chapitres" id="menuList"></nav>
+    </div>
+  </div>
 
   <main>
     <!-- =====================================================
@@ -85,14 +79,19 @@
       <div class="blob blob--gold" aria-hidden="true"></div>
       <div class="container prologue__grid">
         <div class="prologue__text">
-          <p class="kicker"><span class="live"></span><span data-i18n="pro.kicker">Prologue · Wilmington, Delaware</span></p>
+          <p class="kicker"><span class="live"></span><span data-i18n="pro.kicker">Mariane Hounsou · IT Support &amp; Réseaux · Wilmington, DE</span></p>
           <h1 class="prologue__title">
-            <span class="ln"><span data-i18n="pro.hello">Bonjour, je suis</span></span>
-            <span class="ln"><em class="serif shine">Mariane.</em></span>
+            <span class="ln"><span data-i18n="pro.hello">Quand la technologie lâche,</span></span>
+            <span class="ln"><em class="serif shine" data-i18n="pro.name">c'est moi qu'on appelle.</em></span>
           </h1>
-          <p class="prologue__lead" data-i18n="pro.lead">Technicienne <strong>IT Support &amp; Réseaux</strong>. Je fais en sorte que la technologie fonctionne — pour que les gens, eux, puissent avancer.</p>
+          <p class="prologue__lead" data-i18n="pro.lead">Je suis <strong>Mariane Hounsou</strong>, technicienne IT Support et Réseaux. Je dépanne, je configure et j'explique, pour que chacun reprenne son travail sans stress. Voici mon histoire, en 7 chapitres.</p>
+          <ul class="proof">
+            <li><b>BTS</b><span data-i18n="pro.p1">Associate Support Analyst</span></li>
+            <li><b>FR · EN</b><span data-i18n="pro.p2">Bilingue</span></li>
+            <li><b>CCNA</b><span data-i18n="pro.p3">En préparation</span></li>
+          </ul>
           <div class="prologue__cta">
-            <a href="#histoire" class="btn btn--wine" data-i18n="pro.cta1">Lire mon histoire</a>
+            <a href="#histoire" class="btn btn--wine" data-i18n="pro.cta1">Voir comment je travaille</a>
             <button class="btn btn--line" id="ctaTerminal" data-i18n="pro.cta2">Ouvrir le terminal ›_</button>
           </div>
         </div>
@@ -102,8 +101,8 @@
           <button class="badge" id="badge" aria-label="Retourner le badge">
             <span class="badge__face badge__front">
               <span class="badge__clip"></span>
-              <span class="badge__top"><span class="badge__org">IT · SUPPORT</span><span class="badge__chip"></span></span>
-              <span class="badge__avatar">MH</span>
+              <span class="badge__top"><svg class="logo logo--badge" viewBox="0 0 56 40" aria-hidden="true"><g class="logo__links"><path d="M6 32 L6 8 L19 22 L32 8 L32 32"/><path d="M32 20 L50 20"/><path d="M50 8 L50 32"/></g><g class="logo__nodes"><circle cx="6" cy="32" r="3"/><circle cx="6" cy="8" r="3"/><circle cx="32" cy="8" r="3"/><circle cx="32" cy="32" r="3"/><circle cx="50" cy="8" r="3"/><circle cx="50" cy="32" r="3"/></g><circle class="logo__hub" cx="19" cy="22" r="4.5"/></svg><span class="badge__org">IT · SUPPORT</span><span class="badge__chip"></span></span>
+              <span class="badge__avatar"><img src="assets/img/mariane.jpg" alt="Mariane Hounsou" width="640" height="640"></span>
               <span class="badge__name">Mariane Inès Norma<br><b>Hounsou</b></span>
               <span class="badge__role" data-i18n="badge.role">Technicienne IT Support &amp; Réseaux</span>
               <span class="badge__foot"><span>ID · 2026</span><span class="badge__ok" data-i18n="badge.ok">● Accès autorisé</span></span>
@@ -168,17 +167,17 @@
           <article class="story-step" data-step="0">
             <p class="story-step__tag">Cotonou · <span data-i18n="map.bj">Bénin</span></p>
             <h3 data-i18n="s1.title">Tout commence par les réseaux.</h3>
-            <p data-i18n="s1.text">Licence en Administration Réseaux à l'ENEAM. En 2022, premier stage au SPTIC à Calavi : points d'accès Cisco, routeurs MikroTik, remplacement de fibre optique. Le terrain devient une évidence.</p>
+            <p data-i18n="s1.text">J'ai obtenu ma licence en Administration Réseaux à l'ENEAM. En 2022, pendant mon premier stage au SPTIC à Calavi, j'ai configuré des points d'accès Cisco, relancé des routeurs MikroTik et aidé à remplacer de la fibre optique. C'est là que j'ai compris que le terrain était fait pour moi.</p>
           </article>
           <article class="story-step" data-step="1">
             <p class="story-step__tag" data-i18n="s2.tag">2022 · Élargir l'horizon</p>
             <h3 data-i18n="s2.title">Comprendre l'humain, protéger la machine.</h3>
-            <p data-i18n="s2.text">En parallèle, je me forme au UI/UX Design et à l'Ethical Hacking. Deux angles qui changent tout : se mettre à la place de l'utilisateur, et penser comme celui qui attaque pour mieux défendre.</p>
+            <p data-i18n="s2.text">En parallèle, je me suis formée au UI/UX Design et à l'Ethical Hacking. Le premier m'a appris à me mettre à la place de l'utilisateur. Le second m'a appris à penser comme un attaquant pour mieux protéger.</p>
           </article>
           <article class="story-step" data-step="2">
             <p class="story-step__tag">Wilmington · Delaware</p>
             <h3 data-i18n="s3.title">Nouveau pays, même passion.</h3>
-            <p data-i18n="s3.text">Une nouvelle vie, une nouvelle langue de travail. IT Support à la Police Athletic League depuis 2024, Associate Support Analyst chez Berkley Technology Services en 2026 — et un Bachelor en Informatique en cours.</p>
+            <p data-i18n="s3.text">Je me suis installée aux États-Unis et j'ai appris à travailler en anglais. Depuis 2024, j'assure le support informatique de la Police Athletic League de Wilmington. En 2026, j'ai rejoint Berkley Technology Services comme Associate Support Analyst. En même temps, je prépare un Bachelor en Informatique.</p>
           </article>
         </div>
       </div>
@@ -192,7 +191,7 @@
         <header class="chapter-head chapter-head--center">
           <p class="chapter-num">02</p>
           <h2 class="chapter-title"><span data-i18n="f.title">Sur le</span> <em class="serif" data-i18n="f.titleEm">terrain.</em></h2>
-          <p class="chapter-lead" data-i18n="f.lead">Trois postes, un même fil rouge : être là quand la technologie lâche.</p>
+          <p class="chapter-lead" data-i18n="f.lead">Trois postes, une même mission : être là quand la technologie bloque quelqu'un.</p>
         </header>
 
         <div class="segmented" id="xpTabs" role="tablist">
@@ -226,7 +225,7 @@
         <header class="chapter-head">
           <p class="chapter-num">03</p>
           <h2 class="chapter-title"><span data-i18n="p.title">Ce que j'ai</span> <em class="serif" data-i18n="p.titleEm">construit.</em></h2>
-          <p class="chapter-lead" data-i18n="p.lead">Chaque projet est une histoire : un besoin, une action, un résultat. Cliquez pour l'ouvrir.</p>
+          <p class="chapter-lead" data-i18n="p.lead">Chaque projet suit la même logique : un besoin, une action, un résultat. Cliquez sur une carte pour lire l'histoire complète.</p>
         </header>
         <div class="proj-grid" id="projGrid"></div>
       </div>
@@ -240,7 +239,7 @@
         <header class="chapter-head">
           <p class="chapter-num">04</p>
           <h2 class="chapter-title"><span data-i18n="k.title">La boîte</span> <em class="serif" data-i18n="k.titleEm">à outils.</em></h2>
-          <p class="chapter-lead" data-i18n="k.lead">Choisissez un domaine, puis cliquez sur une carte pour découvrir comment j'utilise chaque compétence.</p>
+          <p class="chapter-lead" data-i18n="k.lead">Choisissez un domaine, puis cliquez sur une carte pour voir comment j'utilise chaque compétence au quotidien.</p>
         </header>
         <div class="filters" id="skillTabs" role="tablist"></div>
         <div class="skill-grid" id="skillGrid"></div>
@@ -262,7 +261,7 @@
             <p class="chapter-num">05</p>
             <h2 class="chapter-title"><span data-i18n="h.title">L'humain</span> <em class="serif" data-i18n="h.titleEm">derrière l'écran.</em></h2>
           </div>
-          <p class="chapter-lead" data-i18n="h.lead">La technique résout le problème. L'écoute résout la situation. Retournez les cartes pour voir mon approche.</p>
+          <p class="chapter-lead" data-i18n="h.lead">La technique résout le problème. L'écoute résout la situation. Retournez les cartes pour découvrir ma façon de travailler.</p>
         </header>
         <div class="soft-grid" id="softGrid"></div>
       </div>
@@ -279,7 +278,7 @@
             <h2 class="chapter-title"><span data-i18n="e.title">Apprendre,</span> <em class="serif" data-i18n="e.titleEm">sans cesse.</em></h2>
           </div>
           <div class="edu__ctrl">
-            <p class="chapter-lead" data-i18n="e.lead">De Cotonou à Wilmington. Faites glisser pour parcourir.</p>
+            <p class="chapter-lead" data-i18n="e.lead">De Cotonou à Wilmington. Faites glisser les cartes pour les parcourir.</p>
             <div class="arrows">
               <button class="arrow" id="eduPrev" aria-label="Précédent">←</button>
               <button class="arrow" id="eduNext" aria-label="Suivant">→</button>
@@ -294,28 +293,28 @@
             <div class="edu-card__meta"><span class="tag tag--live" data-i18n="c.ongoing">En cours</span><span>USA</span></div>
             <h3 data-i18n="e1.title">Bachelor of Science en Informatique</h3>
             <p class="edu-card__school">Wilmington University · Delaware</p>
-            <p data-i18n="e1.text">Programmation, systèmes, réseaux, sécurité : consolider la théorie derrière la pratique du terrain.</p>
+            <p data-i18n="e1.text">Programmation, systèmes, réseaux et sécurité. Je renforce la théorie qui se cache derrière ma pratique.</p>
           </article>
           <article class="edu-card edu-card--brown">
             <span class="edu-card__big serif">2023</span>
             <div class="edu-card__meta"><span class="tag" data-i18n="c.grad">Diplômée</span><span data-i18n="map.bj">Bénin</span></div>
             <h3 data-i18n="e2.title">Licence en Administration Réseaux</h3>
             <p class="edu-card__school">ENEAM · Cotonou</p>
-            <p data-i18n="e2.text">Architecture réseau, protocoles, équipements d'interconnexion. Les fondations de tout le reste.</p>
+            <p data-i18n="e2.text">Architecture réseau, protocoles et équipements d'interconnexion. La base de tout ce que je fais aujourd'hui.</p>
           </article>
           <article class="edu-card edu-card--gold">
             <span class="edu-card__big serif">UX</span>
             <div class="edu-card__meta"><span class="tag" data-i18n="c.training">Formation · 2022</span><span data-i18n="map.bj">Bénin</span></div>
             <h3>UI/UX Design</h3>
             <p class="edu-card__school">EIG Bénin</p>
-            <p data-i18n="e3.text">Concevoir pour l'utilisateur. Une façon de penser que j'applique à chaque échange de support.</p>
+            <p data-i18n="e3.text">Concevoir en pensant d'abord à l'utilisateur. J'applique cette façon de penser à chaque échange de support.</p>
           </article>
           <article class="edu-card edu-card--ink">
             <span class="edu-card__big serif">Sec</span>
             <div class="edu-card__meta"><span class="tag" data-i18n="c.training">Formation · 2022</span><span data-i18n="map.bj">Bénin</span></div>
             <h3>Ethical Hacking</h3>
             <p class="edu-card__school">AEI-Synergie</p>
-            <p data-i18n="e4.text">Comprendre les attaques pour mieux protéger les systèmes — et sensibiliser les utilisateurs.</p>
+            <p data-i18n="e4.text">Comprendre les attaques pour mieux protéger les systèmes et sensibiliser les utilisateurs.</p>
           </article>
           <article class="edu-card edu-card--cert">
             <span class="edu-card__big serif">G</span>
@@ -336,7 +335,7 @@
         <header class="chapter-head chapter-head--center">
           <p class="chapter-num">07</p>
           <h2 class="chapter-title"><span data-i18n="g.title">La</span> <em class="serif" data-i18n="g.titleEm">suite.</em></h2>
-          <p class="chapter-lead" data-i18n="g.lead">L'histoire ne fait que commencer. Cliquez sur un objectif.</p>
+          <p class="chapter-lead" data-i18n="g.lead">Mon histoire ne fait que commencer. Cliquez sur un objectif pour en savoir plus.</p>
         </header>
         <div class="goal-grid" id="goalGrid"></div>
       </div>
@@ -351,7 +350,7 @@
         <div>
           <p class="chapter-num" data-i18n="ct.num">Épilogue</p>
           <h2 class="contact__title"><span data-i18n="ct.title">Écrivons la suite</span> <em class="serif" data-i18n="ct.titleEm">ensemble.</em></h2>
-          <p class="chapter-lead" data-i18n="ct.lead">Une opportunité, un projet, une question ? Composez votre message, il s'ouvrira directement dans votre messagerie.</p>
+          <p class="chapter-lead" data-i18n="ct.lead">Une opportunité, un projet ou une question ? Écrivez votre message ici, il s'ouvrira directement dans votre messagerie.</p>
           <div class="contact__info">
             <button class="info-card" id="copyMail" type="button">
               <span class="info-card__label" data-i18n="ct.email">E-mail</span>
@@ -401,7 +400,7 @@
   <!-- ===== Terminal ===== -->
   <div class="term" id="term" aria-hidden="true">
     <div class="term__win" role="dialog" aria-label="Terminal">
-      <div class="term__bar"><button data-term-close aria-label="Fermer"></button><i></i><i></i><span>mariane — zsh</span></div>
+      <div class="term__bar"><button data-term-close aria-label="Fermer"></button><i></i><i></i><span>mariane · zsh</span></div>
       <div class="term__out" id="termOut"></div>
       <form class="term__in" id="termForm"><span class="term__prompt">mariane@profil:~$</span><input id="termInput" autocomplete="off" spellcheck="false" aria-label="Commande"></form>
     </div>

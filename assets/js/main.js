@@ -19,10 +19,10 @@
     "ch.1": "01 · Origins", "ch.2": "02 · Field", "ch.3": "03 · Projects", "ch.4": "04 · Skills",
     "ch.5": "05 · Human", "ch.6": "06 · Education", "ch.7": "07 · What's next", "ch.8": "Epilogue",
 
-    "pro.kicker": "Prologue · Wilmington, Delaware",
-    "pro.hello": "Hi, I'm",
-    "pro.lead": "<strong>IT Support &amp; Network</strong> technician. I make technology work — so people can keep moving forward.",
-    "pro.cta1": "Read my story", "pro.cta2": "Open the terminal ›_",
+    "pro.kicker": "Mariane Hounsou · IT Support &amp; Networking · Wilmington, DE",
+    "pro.hello": "When technology fails,",
+    "pro.lead": "I'm <strong>Mariane Hounsou</strong>, an IT Support and Network technician. I troubleshoot, configure and explain, so everyone gets back to work without stress. Here is my story, in 7 chapters.",
+    "pro.cta1": "See how I work", "pro.cta2": "Open the terminal ›_",
     "badge.role": "IT Support &amp; Network Technician", "badge.ok": "● Access granted",
     "badge.back": "Languages", "badge.base": "Based in", "badge.origin": "Origin", "badge.originVal": "Cotonou · Benin",
     "badge.hint": "↻ Click the badge",
@@ -32,49 +32,66 @@
     "map.bj": "Benin",
     "s.title": "The", "s.titleEm": "origins.",
     "s1.title": "It all starts with networks.",
-    "s1.text": "A Bachelor's in Network Administration at ENEAM. In 2022, my first internship at SPTIC in Calavi: Cisco access points, MikroTik routers, fiber optic replacements. The field quickly became obvious.",
+    "s1.text": "I earned my Bachelor's in Network Administration at ENEAM. In 2022, during my first internship at SPTIC in Calavi, I configured Cisco access points, restarted MikroTik routers and helped replace fiber optic links. That is when I knew field work was for me.",
     "s2.tag": "2022 · Widening the horizon",
     "s2.title": "Understand people, protect machines.",
-    "s2.text": "Alongside, I trained in UI/UX Design and Ethical Hacking. Two angles that change everything: putting myself in the user's shoes, and thinking like an attacker to defend better.",
+    "s2.text": "Alongside, I trained in UI/UX Design and Ethical Hacking. The first taught me to see things from the user's side. The second taught me to think like an attacker in order to protect better.",
     "s3.title": "New country, same passion.",
-    "s3.text": "A new life, a new working language. IT Support at the Police Athletic League since 2024, Associate Support Analyst at Berkley Technology Services in 2026 — while pursuing a B.Sc. in Computer Science.",
+    "s3.text": "I moved to the United States and learned to work in English. Since 2024, I have handled IT support for the Police Athletic League of Wilmington. In 2026, I joined Berkley Technology Services as an Associate Support Analyst. At the same time, I am studying for a B.Sc. in Computer Science.",
 
     "f.title": "In the", "f.titleEm": "field.",
-    "f.lead": "Three roles, one common thread: being there when technology lets people down.",
+    "f.lead": "Three roles, one mission: being there when technology gets in someone's way.",
     "sim.kicker": "A typical day · Interactive simulation",
     "sim.title": "Your turn: solve the tickets.", "sim.solved": "solved",
 
     "p.title": "What I've", "p.titleEm": "built.",
-    "p.lead": "Every project is a story: a need, an action, an outcome. Click to open it.",
+    "p.lead": "Every project follows the same logic: a need, an action, an outcome. Click a card to read the full story.",
 
     "k.title": "The", "k.titleEm": "toolbox.",
-    "k.lead": "Pick a domain, then click a card to see how I use each skill.",
+    "k.lead": "Pick a domain, then click a card to see how I use each skill day to day.",
 
     "h.title": "The human", "h.titleEm": "behind the screen.",
-    "h.lead": "Technology fixes the problem. Listening fixes the situation. Flip the cards to see my approach.",
+    "h.lead": "Technology fixes the problem. Listening fixes the situation. Flip the cards to discover how I work.",
 
     "e.title": "Always", "e.titleEm": "learning.",
-    "e.lead": "From Cotonou to Wilmington. Drag to browse.",
+    "e.lead": "From Cotonou to Wilmington. Drag the cards to browse them.",
     "c.ongoing": "In progress", "c.grad": "Graduated", "c.training": "Training · 2022", "c.earned": "Earned",
     "e1.title": "Bachelor of Science in Computer Science",
-    "e1.text": "Programming, systems, networks, security: strengthening the theory behind field practice.",
+    "e1.text": "Programming, systems, networks and security. I am strengthening the theory behind my practice.",
     "e2.title": "Bachelor's in Network Administration",
-    "e2.text": "Network architecture, protocols, interconnection equipment. The foundation for everything else.",
-    "e3.text": "Designing for the user. A mindset I bring to every support conversation.",
-    "e4.text": "Understanding attacks to better protect systems — and raise user awareness.",
+    "e2.text": "Network architecture, protocols and interconnection equipment. The foundation of everything I do today.",
+    "e3.text": "Designing with the user in mind first. I bring this mindset to every support conversation.",
+    "e4.text": "Understanding attacks to better protect systems and raise user awareness.",
     "e5.school": "Professional certificate",
     "e5.text": "Technical support, networking, operating systems, system administration and IT security.",
 
     "g.title": "What's", "g.titleEm": "next.",
-    "g.lead": "The story is only beginning. Click a goal.",
+    "g.lead": "My story is only beginning. Click a goal to learn more.",
 
     "ct.num": "Epilogue", "ct.title": "Let's write what comes next", "ct.titleEm": "together.",
-    "ct.lead": "An opportunity, a project, a question? Compose your message — it will open straight in your mail app.",
+    "ct.lead": "An opportunity, a project or a question? Write your message here and it will open straight in your mail app.",
     "ct.email": "Email", "ct.copy": "Click to copy", "ct.where": "Location", "ct.country": "United States",
     "ct.new": "New message", "ct.to": "To", "ct.from": "From", "ct.subject": "Subject", "ct.send": "Send",
     "ct.fromPh": "Your name", "ct.subjectPh": "IT Support opportunity", "ct.msgPh": "Hi Mariane, …",
-    "foot.egg": "Tip: type “help” in the terminal ›_", "foot.top": "Back to top ↑"
+    "foot.egg": "Tip: type “help” in the terminal ›_", "foot.top": "Back to top ↑",
+    "pro.name": "I'm the one they call.",
+    "pro.p1": "Associate Support Analyst",
+    "pro.p2": "Bilingual",
+    "pro.p3": "In preparation",
+    "menu.status": "Available · Wilmington, DE"
   };
+
+  const CHAPTERS = [
+    { id: "prologue", n: "00", l: { fr: "Prologue", en: "Prologue" }, t: { fr: "Pro<em>logue</em>", en: "Pro<em>logue</em>" }, d: { fr: "Bonjour, je suis Mariane", en: "Hi, I'm Mariane" } },
+    { id: "histoire", n: "01", l: { fr: "Origines", en: "Origins" }, t: { fr: "Les <em>origines</em>", en: "The <em>origins</em>" }, d: { fr: "Cotonou → Wilmington", en: "Cotonou → Wilmington" } },
+    { id: "terrain", n: "02", l: { fr: "Terrain", en: "Field" }, t: { fr: "Sur le <em>terrain</em>", en: "In the <em>field</em>" }, d: { fr: "Expériences & simulateur de tickets", en: "Experience & ticket simulator" } },
+    { id: "projets", n: "03", l: { fr: "Projets", en: "Projects" }, t: { fr: "Ce que j'ai <em>construit</em>", en: "What I've <em>built</em>" }, d: { fr: "Réalisations", en: "Achievements" } },
+    { id: "competences", n: "04", l: { fr: "Compétences", en: "Skills" }, t: { fr: "La boîte <em>à outils</em>", en: "The <em>toolbox</em>" }, d: { fr: "34 compétences techniques", en: "34 technical skills" } },
+    { id: "humain", n: "05", l: { fr: "Humain", en: "Human" }, t: { fr: "L'humain <em>derrière l'écran</em>", en: "The human <em>behind the screen</em>" }, d: { fr: "Savoir-être", en: "Soft skills" } },
+    { id: "formations", n: "06", l: { fr: "Formations", en: "Education" }, t: { fr: "Apprendre <em>sans cesse</em>", en: "Always <em>learning</em>" }, d: { fr: "Diplômes & certificats", en: "Degrees & certificates" } },
+    { id: "objectifs", n: "07", l: { fr: "La suite", en: "What's next" }, t: { fr: "La <em>suite</em>", en: "What's <em>next</em>" }, d: { fr: "Certifications & objectifs", en: "Certifications & goals" } },
+    { id: "contact", n: "✦", l: { fr: "Contact", en: "Contact" }, t: { fr: "<em>Épilogue</em>", en: "<em>Epilogue</em>" }, d: { fr: "Écrivons la suite ensemble", en: "Let's write what's next" } }
+  ];
 
   const BOOT = {
     fr: ["init --profil mariane", "chargement des compétences…", "connexion au réseau… OK", "accès autorisé ✓"],
@@ -87,22 +104,22 @@
   const XP = [
     {
       big: "BTS", live: true,
-      date: { fr: "Juin 2026 — Aujourd'hui", en: "June 2026 — Present" },
+      date: { fr: "Depuis juin 2026", en: "Since June 2026" },
       role: { fr: "Associate Support Analyst · Stagiaire", en: "Associate Support Analyst Intern" },
       org: "Berkley Technology Services", place: "Wilmington, DE · USA",
-      story: { fr: "Le monde de l'entreprise : des centaines d'utilisateurs, des outils exigeants, zéro place à l'approximation.", en: "The corporate world: hundreds of users, demanding tools, no room for guesswork." },
+      story: { fr: "Un environnement d'entreprise exigeant, avec de nombreux utilisateurs et des outils pointus. Ici, chaque détail compte.", en: "A demanding corporate environment, with many users and advanced tools. Here, every detail matters." },
       list: {
-        fr: ["Support technique de niveau 1 en environnement corporate.", "Suivi des incidents et gestion des tickets sous ServiceNow.", "Support Microsoft 365 : Outlook, Teams.", "Résolution des problèmes d'accès, de mots de passe et de comptes.", "Documentation selon les procédures ITSM, en équipe avec les analystes."],
-        en: ["First-level technical support in a corporate environment.", "Incident tracking and ticket management in ServiceNow.", "Microsoft 365 support: Outlook, Teams.", "Resolving access, password and account issues.", "Documentation per ITSM procedures, working with fellow analysts."]
+        fr: ["Support technique de niveau 1 en environnement corporate.", "Suivi des incidents et gestion des tickets sous ServiceNow.", "Support Microsoft 365 : Outlook, Teams.", "Résolution des problèmes d'accès, de mots de passe et de comptes.", "Rédaction de la documentation selon les procédures ITSM, avec l'équipe d'analystes."],
+        en: ["First-level technical support in a corporate environment.", "Incident tracking and ticket management in ServiceNow.", "Microsoft 365 support: Outlook, Teams.", "Resolving access, password and account issues.", "Writing documentation that follows ITSM procedures, with the analyst team."]
       },
       tools: ["ServiceNow", "Microsoft 365", "Citrix Workspace", "Tanium", "Azure", "Zscaler"]
     },
     {
       big: "PALW", live: true,
-      date: { fr: "Octobre 2024 — Aujourd'hui", en: "October 2024 — Present" },
+      date: { fr: "Depuis octobre 2024", en: "Since October 2024" },
       role: { fr: "IT Support", en: "IT Support" },
       org: "Police Athletic League of Wilmington", place: "Wilmington, DE · USA",
-      story: { fr: "Être la personne qu'on appelle quand plus rien ne marche — et repartir quand tout fonctionne.", en: "Being the person people call when nothing works — and leaving once everything runs." },
+      story: { fr: "Je suis la personne qu'on appelle quand plus rien ne marche. Je repars quand tout fonctionne.", en: "I'm the person people call when nothing works. I leave once everything runs." },
       list: {
         fr: ["Support sur site : matériel et connectivité réseau.", "Installation et configuration de routeurs, points d'accès Wi-Fi et imprimantes.", "Diagnostic des problèmes Internet et de performance système.", "Mise en service de postes : installation Windows, sessions utilisateurs."],
         en: ["On-site support: hardware and network connectivity.", "Installing and configuring routers, Wi-Fi access points and printers.", "Troubleshooting internet and system performance issues.", "Workstation setup: Windows installation, user logins."]
@@ -111,10 +128,10 @@
     },
     {
       big: "SPTIC", live: false,
-      date: { fr: "Juillet — Août 2022", en: "July — August 2022" },
+      date: { fr: "Juillet à août 2022", en: "July to August 2022" },
       role: { fr: "Stagiaire Réseau", en: "Network Intern" },
       org: { fr: "Service de Promotion des TIC", en: "ICT Promotion Service" }, place: { fr: "Calavi · Bénin", en: "Calavi · Benin" },
-      story: { fr: "Le premier terrain. Des câbles, des antennes, et des techniciens seniors qui transmettent.", en: "The first field. Cables, antennas, and senior technicians passing on their know-how." },
+      story: { fr: "Mon premier terrain : des câbles, des antennes et des techniciens expérimentés qui m'ont transmis leur savoir.", en: "My first field job: cables, antennas and experienced technicians who shared their know-how with me." },
       list: {
         fr: ["Configuration de points d'accès Cisco.", "Réinitialisation de routeurs MikroTik.", "Remplacement de fibre optique et diagnostics de connectivité.", "Résolution d'incidents réseau locaux et distants."],
         en: ["Configuring Cisco access points.", "Resetting MikroTik routers.", "Fiber optic replacements and connectivity diagnostics.", "Resolving local and remote network issues."]
@@ -170,7 +187,7 @@
     {
       vis: "desk", tag: "BTS · 2026",
       title: { fr: "Support utilisateurs en entreprise", en: "Enterprise end-user support" },
-      need: { fr: "Des utilisateurs bloqués — accès, comptes, outils — qui doivent reprendre leur travail rapidement.", en: "Blocked users — access, accounts, tools — who need to get back to work fast." },
+      need: { fr: "Des utilisateurs bloqués par un problème d'accès, de compte ou d'outil, qui doivent reprendre leur travail rapidement.", en: "Users blocked by an access, account or tool issue, who need to get back to work quickly." },
       action: { fr: "Gestion des incidents dans ServiceNow, support Microsoft 365, environnements Citrix, Tanium, Azure et Zscaler, documentation ITSM.", en: "Incident management in ServiceNow, Microsoft 365 support, Citrix, Tanium, Azure and Zscaler environments, ITSM documentation." },
       result: { fr: "Des tickets traités de bout en bout et des solutions documentées pour l'équipe.", en: "Tickets handled end-to-end and solutions documented for the team." },
       tools: ["ServiceNow", "Microsoft 365", "Citrix", "ITSM"]
@@ -240,15 +257,15 @@
     { e: "🧩", t: { fr: "Résolution de problèmes", en: "Problem solving" }, s: { fr: "Méthode avant tout.", en: "Method first." },
       b: { fr: "J'isole les variables une à une. Une panne n'est qu'une énigme qu'on n'a pas encore bien regardée.", en: "I isolate variables one at a time. An outage is just a puzzle nobody has looked at properly yet." } },
     { e: "💬", t: { fr: "Communication", en: "Communication" }, s: { fr: "Traduire la technique.", en: "Translating tech." },
-      b: { fr: "J'explique sans jargon, je reformule, et je m'assure que l'utilisateur a compris — pas seulement que c'est réparé.", en: "I explain without jargon, rephrase, and make sure the user understood — not just that it's fixed." } },
+      b: { fr: "J'explique sans jargon et je reformule. Je vérifie que la personne a compris, pas seulement que le problème est réglé.", en: "I explain without jargon and rephrase. I check that the person understood, not just that the problem is fixed." } },
     { e: "🤝", t: { fr: "Service client", en: "Customer service" }, s: { fr: "L'utilisateur d'abord.", en: "User first." },
-      b: { fr: "Derrière un ticket, il y a quelqu'un de stressé. Je commence toujours par rassurer.", en: "Behind a ticket is someone stressed. I always start by reassuring them." } },
+      b: { fr: "Derrière chaque ticket, il y a quelqu'un de stressé. Je commence toujours par le rassurer.", en: "Behind every ticket is someone under stress. I always start by reassuring them." } },
     { e: "👥", t: { fr: "Travail d'équipe", en: "Teamwork" }, s: { fr: "Ensemble, plus vite.", en: "Faster together." },
       b: { fr: "Je partage mes solutions, je documente, et je n'hésite pas à demander quand un collègue sait mieux.", en: "I share my fixes, document them, and ask when a colleague knows better." } },
     { e: "🌍", t: { fr: "Adaptabilité", en: "Adaptability" }, s: { fr: "Deux pays, deux langues.", en: "Two countries, two languages." },
       b: { fr: "Du Bénin aux États-Unis, du français à l'anglais : changer d'environnement est devenu une force.", en: "From Benin to the US, from French to English: changing environments has become a strength." } },
     { e: "⏱️", t: { fr: "Gestion du temps", en: "Time management" }, s: { fr: "Prioriser l'impact.", en: "Prioritise impact." },
-      b: { fr: "Urgence et impact d'abord. Je travaille en parallèle de mes études, l'organisation n'est pas une option.", en: "Urgency and impact first. I work alongside my studies — being organised isn't optional." } },
+      b: { fr: "Je traite d'abord ce qui est urgent et ce qui bloque le plus de monde. Je travaille et j'étudie en même temps, alors l'organisation est essentielle.", en: "I handle what is urgent and what blocks the most people first. I work and study at the same time, so being organised is essential." } },
     { e: "🧘", t: { fr: "Patience & calme", en: "Patience & calm" }, s: { fr: "Sous pression, posée.", en: "Calm under pressure." },
       b: { fr: "Quand tout le monde s'agite, je ralentis, je respire, et je suis la procédure.", en: "When everyone rushes, I slow down, breathe, and follow the procedure." } },
     { e: "📚", t: { fr: "Curiosité", en: "Curiosity" }, s: { fr: "Toujours en apprentissage.", en: "Always learning." },
@@ -303,7 +320,8 @@
     $$("[data-i18n-label]").forEach(el => { el.dataset.label = T(el.dataset.i18nLabel); });
     try { localStorage.setItem("lang", lang); } catch (e) { /* ignore */ }
     splitManifesto(); renderXP(xpIndex, false); renderTickets(); renderProjects(); renderSkillTabs(); renderSkills(false);
-    renderSoft(); renderGoals(); renderRibbon(); renderSubjects();
+    renderSoft(); renderGoals(); renderRibbon(); renderSubjects(); renderMenu();
+    curChapter = null;
     requestAnimationFrame(onScroll);
   }
   $("#langToggle").addEventListener("click", () => applyLang(lang === "fr" ? "en" : "fr"));
@@ -363,7 +381,7 @@
     let mx = innerWidth / 2, my = innerHeight / 2, rx = mx, ry = my;
     addEventListener("pointermove", e => { mx = e.clientX; my = e.clientY; cDot.style.transform = `translate(${mx}px,${my}px) translate(-50%,-50%)`; });
     (function follow() { rx += (mx - rx) * .18; ry += (my - ry) * .18; cRing.style.transform = `translate(${rx}px,${ry}px) translate(-50%,-50%)`; requestAnimationFrame(follow); })();
-    document.addEventListener("pointerover", e => cursor.classList.toggle("is-hover", !!e.target.closest("a, button, .flip, .soft, .proj, .goal, .rail, label")));
+    document.addEventListener("pointerover", e => cursor.classList.toggle("is-hover", !!e.target.closest("a, button, .flip, .soft, .proj, .goal, .rail, label, .menu__item")));
     addEventListener("pointerdown", () => cursor.classList.add("is-down"));
     addEventListener("pointerup", () => cursor.classList.remove("is-down"));
   }
@@ -721,7 +739,7 @@
     composer.classList.add("is-sent"); setTimeout(() => composer.classList.remove("is-sent"), 1000);
     const r = $(".composer__send", composer).getBoundingClientRect(); sparks(r.left + r.width / 2, r.top + r.height / 2, 34, 1.6);
     toast(UI[lang].sent);
-    const body = msg + (name ? `\n\n— ${name}` : "");
+    const body = msg + (name ? `\n\n${name}` : "");
     setTimeout(() => { location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }, 500);
   });
   $("#copyMail").addEventListener("click", async () => {
@@ -743,10 +761,10 @@
     help: () => p(lang === "fr"
       ? `Commandes disponibles :\n  <span class="c">about</span>       qui est Mariane ?\n  <span class="c">experience</span>  son parcours\n  <span class="c">skills</span>      ses compétences\n  <span class="c">education</span>   ses formations\n  <span class="c">goals</span>       ses objectifs\n  <span class="c">contact</span>     la joindre\n  <span class="c">ping</span>        tester la connexion\n  <span class="c">goto</span> &lt;section&gt; naviguer (histoire, terrain, projets…)\n  <span class="c">lang</span>        FR ⇄ EN\n  <span class="c">clear</span>       effacer\n  <span class="c">sudo hire mariane</span>  🤫`
       : `Available commands:\n  <span class="c">about</span>       who is Mariane?\n  <span class="c">experience</span>  her journey\n  <span class="c">skills</span>      her skills\n  <span class="c">education</span>   her education\n  <span class="c">goals</span>       her goals\n  <span class="c">contact</span>     reach her\n  <span class="c">ping</span>        test the connection\n  <span class="c">goto</span> &lt;section&gt; navigate (story, field, projects…)\n  <span class="c">lang</span>        FR ⇄ EN\n  <span class="c">clear</span>       clear screen\n  <span class="c">sudo hire mariane</span>  🤫`),
-    about: () => p(lang === "fr" ? "Mariane Inès Norma Hounsou — Technicienne IT Support & Réseaux.\nDe Cotonou (Bénin) à Wilmington (Delaware, USA). Bilingue français / anglais." : "Mariane Inès Norma Hounsou — IT Support & Network Technician.\nFrom Cotonou (Benin) to Wilmington (Delaware, USA). Bilingual French / English."),
-    experience: () => XP.forEach(x => p(`<span class="c">▸ ${L(x.role)}</span> — ${L(x.org)} <span class="m">(${L(x.date)})</span>`)),
+    about: () => p(lang === "fr" ? "Mariane Inès Norma Hounsou, technicienne IT Support & Réseaux.\nDe Cotonou (Bénin) à Wilmington (Delaware, USA). Bilingue français / anglais." : "Mariane Inès Norma Hounsou, IT Support & Network Technician.\nFrom Cotonou (Benin) to Wilmington (Delaware, USA). Bilingual French / English."),
+    experience: () => XP.forEach(x => p(`<span class="c">▸ ${L(x.role)}</span> · ${L(x.org)} <span class="m">(${L(x.date)})</span>`)),
     skills: () => SKILL_CATS.forEach(c => p(`<span class="c">${c[lang]}</span>: ${SKILLS.filter(s => s.cat === c.id).map(s => L(s.name)).join(", ")}`)),
-    education: () => p(lang === "fr" ? "▸ B.Sc. Informatique — Wilmington University (en cours)\n▸ Licence Administration Réseaux — ENEAM (2023)\n▸ UI/UX Design — EIG Bénin (2022)\n▸ Ethical Hacking — AEI-Synergie (2022)" : "▸ B.Sc. Computer Science — Wilmington University (in progress)\n▸ Bachelor's in Network Administration — ENEAM (2023)\n▸ UI/UX Design — EIG Benin (2022)\n▸ Ethical Hacking — AEI-Synergie (2022)"),
+    education: () => p(lang === "fr" ? "▸ B.Sc. Informatique · Wilmington University (en cours)\n▸ Licence Administration Réseaux · ENEAM (2023)\n▸ UI/UX Design · EIG Bénin (2022)\n▸ Ethical Hacking · AEI-Synergie (2022)" : "▸ B.Sc. Computer Science · Wilmington University (in progress)\n▸ Bachelor's in Network Administration · ENEAM (2023)\n▸ UI/UX Design · EIG Benin (2022)\n▸ Ethical Hacking · AEI-Synergie (2022)"),
     goals: () => GOALS.forEach(g => p(`${g.st === "done" ? '<span class="ok">✓</span>' : g.st === "prog" ? '<span class="c">◐</span>' : '<span class="m">○</span>'} ${L(g.t)} <span class="m">[${"█".repeat(Math.round(g.p / 10))}${"░".repeat(10 - Math.round(g.p / 10))}] ${g.p}%</span>`)),
     contact: () => p(`✉  <a href="mailto:${EMAIL}">${EMAIL}</a>\n📍 Wilmington, DE · USA`),
     ping: () => {
@@ -773,7 +791,7 @@
       if (id) { p("→ " + id, "ok"); setTimeout(() => { closeTerm(); $("#" + id).scrollIntoView({ behavior: "smooth" }); }, 400); }
       else p(lang === "fr" ? "Section inconnue. Essayez : goto projets" : "Unknown section. Try: goto projects", "r");
     } else if (CMDS[c]) CMDS[c](args);
-    else p(lang === "fr" ? `commande introuvable : ${c.replace(/</g, "&lt;")} — tapez <span class="c">help</span>` : `command not found: ${c.replace(/</g, "&lt;")} — type <span class="c">help</span>`, "r");
+    else p(lang === "fr" ? `commande introuvable : ${c.replace(/</g, "&lt;")}. Tapez <span class="c">help</span>` : `command not found: ${c.replace(/</g, "&lt;")}. Type <span class="c">help</span>`, "r");
     termOut.scrollTop = 1e9;
   }
   function openTerm() {
@@ -782,7 +800,7 @@
     setTimeout(() => termInput.focus(), 100);
   }
   function closeTerm() { term.classList.remove("is-open"); term.setAttribute("aria-hidden", "true"); }
-  $("#termOpen").addEventListener("click", openTerm);
+  $("#termOpen").addEventListener("click", () => { closeMenu(); setTimeout(openTerm, 350); });
   term.addEventListener("click", e => { if (e.target === term || e.target.closest("[data-term-close]")) closeTerm(); });
   $("#termForm").addEventListener("submit", e => { e.preventDefault(); run(termInput.value); termInput.value = ""; });
   termInput.addEventListener("keydown", e => {
@@ -791,7 +809,7 @@
     if (e.key === "Tab") { e.preventDefault(); const m = Object.keys(CMDS).concat("goto", "sudo hire mariane").find(k => k.startsWith(termInput.value)); if (m) termInput.value = m; }
   });
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") { closeTerm(); closeModal(); }
+    if (e.key === "Escape") { closeTerm(); closeModal(); closeMenu(); }
     if (e.key === "`" && !e.target.closest("input, textarea")) { e.preventDefault(); term.classList.contains("is-open") ? closeTerm() : openTerm(); }
   });
 
@@ -806,13 +824,57 @@
   }), { threshold: .15, rootMargin: "0px 0px -6% 0px" });
 
   /* =======================================================
-     Scroll: progress, nav, chapter dots, manifesto, arc
+     Island header + menu
      ======================================================= */
-  const nav = $("#nav"), chapters = $("#chapters"), progress = $(".progress span");
+  const island = $("#island"), nowNum = $("#nowNum"), nowWrap = $("#nowWrap"), ringVal = $("#ringVal");
+  const menu = $("#menu"), menuBtn = $("#menuBtn"), menuList = $("#menuList");
+  let curChapter = null;
+  function renderMenu() {
+    menuList.innerHTML = CHAPTERS.map((c, i) => `
+      <a class="menu__item${c.id === curChapter ? " is-current" : ""}" href="#${c.id}" style="--i:${i}" data-menu-link>
+        <span class="menu__n">${c.n}</span><span class="menu__t">${L(c.t)}</span><span class="menu__d">${L(c.d)}</span>
+      </a>`).join("");
+  }
+  function setChapter(id) {
+    if (id === curChapter) return;
+    const first = curChapter === null; curChapter = id;
+    const c = CHAPTERS.find(x => x.id === id) || CHAPTERS[0];
+    nowNum.textContent = c.n;
+    const next = document.createElement("span");
+    next.textContent = L(c.l);
+    if (first || reduce) { nowWrap.innerHTML = ""; nowWrap.appendChild(next); }
+    else {
+      const olds = $$("span", nowWrap);
+      olds.forEach(o => { if (o.classList.contains("out")) return o.remove(); o.classList.remove("in"); o.classList.add("out"); o.style.cssText = "position:absolute;top:0;left:0"; });
+      next.classList.add("in"); nowWrap.style.position = "relative"; nowWrap.appendChild(next);
+      setTimeout(() => olds.forEach(o => o.remove()), 320);
+      island.classList.remove("bump"); void island.offsetWidth; island.classList.add("bump");
+    }
+    nowWrap.style.width = `${next.scrollWidth + 2}px`;
+    $$(".menu__item", menuList).forEach(a => a.classList.toggle("is-current", a.getAttribute("href") === `#${id}`));
+  }
+  function openMenu() {
+    document.documentElement.classList.add("menu-open"); menu.setAttribute("aria-hidden", "false"); menuBtn.setAttribute("aria-expanded", "true");
+    const r = menuBtn.getBoundingClientRect(); sparks(r.left + r.width / 2, r.top + r.height / 2, 18, 1.2);
+  }
+  function closeMenu() {
+    if (!document.documentElement.classList.contains("menu-open")) return;
+    document.documentElement.classList.remove("menu-open"); menu.setAttribute("aria-hidden", "true"); menuBtn.setAttribute("aria-expanded", "false");
+  }
+  menuBtn.addEventListener("click", () => document.documentElement.classList.contains("menu-open") ? closeMenu() : openMenu());
+  menu.addEventListener("click", e => {
+    const a = e.target.closest("[data-menu-link]"); if (!a) return;
+    e.preventDefault(); closeMenu();
+    const target = $(a.getAttribute("href"));
+    setTimeout(() => target.scrollIntoView({ behavior: reduce ? "auto" : "smooth" }), 250);
+  });
+
+  /* =======================================================
+     Scroll: island progress + chapter, manifesto, arc
+     ======================================================= */
   const sections = $$("main > section[id]");
-  const navLinks = $$(".nav__links a"), dots = $$("a", chapters);
-  let lastY = scrollY, ticking = false;
   const themed = $$("main > section, .footer");
+  let lastY = scrollY, ticking = false;
   function themeAt(y) {
     const sec = themed.find(s => { const r = s.getBoundingClientRect(); return r.top <= y && r.bottom > y; });
     return !!sec && (sec.dataset.theme === "dark" || sec.classList.contains("footer"));
@@ -820,17 +882,14 @@
   function onScroll() {
     ticking = false;
     const y = scrollY, vh = innerHeight, max = document.documentElement.scrollHeight - vh;
-    progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-    nav.classList.toggle("is-scrolled", y > 30);
-    if (!nav.classList.contains("is-open")) nav.classList.toggle("is-hidden", y > lastY && y > vh * .9);
+    ringVal.style.strokeDashoffset = 125.7 * (1 - (max > 0 ? clamp(y / max) : 0));
+    island.classList.toggle("is-tucked", y > lastY && y > vh * .5);
     lastY = y;
-    const navDark = themeAt(30), midDark = themeAt(vh / 2);
-    nav.classList.toggle("on-dark", !!navDark); chapters.classList.toggle("on-dark", !!midDark); cursor.classList.toggle("on-dark", !!midDark);
+    cursor.classList.toggle("on-dark", themeAt(vh / 2));
     let cur = sections[0].id;
     sections.forEach(s => { if (s.getBoundingClientRect().top < vh * .5) cur = s.id; });
     if (cur === "manifeste") cur = "prologue";
-    navLinks.forEach(a => a.classList.toggle("is-active", a.getAttribute("href") === `#${cur}`));
-    dots.forEach(a => a.classList.toggle("is-active", a.getAttribute("href") === `#${cur}`));
+    setChapter(cur);
     if (words.length) {
       const r = manifesto.getBoundingClientRect();
       const p = clamp((vh * .8 - r.top) / (r.height + vh * .3)), lit = Math.floor(p * words.length * 1.05);
@@ -839,11 +898,6 @@
     updateArc();
   }
   addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
-
-  /* Mobile menu */
-  const burger = $("#burger");
-  burger.addEventListener("click", () => { const o = nav.classList.toggle("is-open"); burger.setAttribute("aria-expanded", o); nav.classList.remove("is-hidden"); });
-  $$("#mobileMenu a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); }));
 
   /* =======================================================
      Init

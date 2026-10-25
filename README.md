@@ -20,6 +20,10 @@ Site personnel statique (HTML / CSS / JS, sans dépendance) qui raconte le parco
 | 07 La suite | Certifications & objectifs | Anneaux de progression cliquables |
 | Épilogue | Contact | Composeur de message → ouvre la messagerie |
 
+En-tête : une « île » flottante façon Dynamic Island (logo animé, chapitre en cours, anneau de progression) qui ouvre un menu plein écran avec révélation circulaire.
+
+Logo : « MH » dessiné comme un réseau — le M et le H partagent un même câble, le nœud doré est le hub (`assets/favicon.svg`).
+
 Partout : étincelles au clic, curseur personnalisé, bascule FR / EN, et un **terminal caché** (bouton `›_` ou touche `` ` ``, tapez `help`).
 
 ## Lancer en local
@@ -37,21 +41,14 @@ python3 -m http.server 8000
 | Textes EN fixes | `assets/js/main.js` → objet `EN` |
 | Expériences, tickets, projets, compétences, soft skills, objectifs | `assets/js/main.js` → `XP`, `TICKETS`, `PROJECTS`, `SKILLS`, `SOFT`, `GOALS` |
 | Couleurs | `assets/css/style.css` → `:root` |
+| Photo | `assets/img/mariane.jpg` (carré, 640 px) |
+| Chapitres du menu | `assets/js/main.js` → `CHAPTERS` |
 
 ## Adresse du site (URL)
 
-GitHub Pages construit l'adresse à partir du **nom du compte** et du **nom du dépôt** :
+Le dépôt appartient à l'organisation `mariane-portfolio` et s'appelle `mariane-portfolio.github.io`.
+Le site est donc publié à l'adresse **https://mariane-portfolio.github.io**.
 
-| Configuration | Adresse obtenue |
-|---|---|
-| Actuelle : compte `adebayo-moutalabi`, dépôt `mariane-portfolio.github.io` | `adebayo-moutalabi.github.io/mariane-portfolio.github.io/` |
-| Organisation GitHub `marianehounsou` + dépôt `marianehounsou.github.io` | `marianehounsou.github.io` |
-| Nom de domaine personnel (ex. `marianehounsou.com`) | `marianehounsou.com` |
+Pour activer la publication : *Settings → Pages → Deploy from a branch*, choisir la branche `main` et le dossier `/ (root)`.
 
-Pour une adresse propre sans le nom du compte :
-
-1. **Gratuit** : créer une organisation GitHub (github.com → *Your organizations* → *New organization* → plan Free), par ex. `marianehounsou`.
-2. Transférer ce dépôt dans l'organisation (*Settings → General → Transfer ownership*), puis le renommer exactement `marianehounsou.github.io`.
-3. *Settings → Pages* → *Deploy from a branch* → branche `main`, dossier `/ (root)`.
-
-Option domaine personnel : acheter le domaine, ajouter un fichier `CNAME` contenant le domaine à la racine, puis le renseigner dans *Settings → Pages → Custom domain*.
+Option domaine personnel : acheter le domaine (ex. `marianehounsou.com`), ajouter un fichier `CNAME` contenant ce domaine à la racine, puis le renseigner dans *Settings → Pages → Custom domain*.

@@ -4,445 +4,378 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mariane Hounsou — IT Support & Réseaux</title>
-  <meta name="description" content="Mariane Inès Norma Hounsou — Technicienne IT Support & Réseaux basée à Wilmington, DE. Parcours, formations, compétences et projets.">
+  <meta name="description" content="Mariane Inès Norma Hounsou — Technicienne IT Support & Réseaux à Wilmington, DE. Son histoire, son terrain, ses compétences et ses projets.">
   <meta name="theme-color" content="#69001c">
   <meta property="og:title" content="Mariane Hounsou — IT Support & Réseaux">
-  <meta property="og:description" content="Parcours, formations, compétences et projets de Mariane Inès Norma Hounsou.">
+  <meta property="og:description" content="L'histoire, les compétences et les projets de Mariane Inès Norma Hounsou.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="is-booting">
+
+  <!-- ===== Boot loader ===== -->
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot__inner">
+      <p class="boot__line"><span class="boot__prompt">mariane@profil:~$</span> <span id="bootText"></span><span class="caret"></span></p>
+      <div class="boot__bar"><span id="bootBar"></span></div>
+      <p class="boot__skip" data-i18n="boot.skip">Cliquer pour passer</p>
+    </div>
+  </div>
+
+  <!-- ===== Global FX ===== -->
+  <canvas class="fx" id="fx" aria-hidden="true"></canvas>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
   <div class="progress" aria-hidden="true"><span></span></div>
 
-  <!-- ========== NAV ========== -->
+  <!-- ===== Nav ===== -->
   <header class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#top" class="nav__logo" aria-label="Accueil">
-        <span class="mono">MH</span>
-      </a>
-      <nav class="nav__links" aria-label="Navigation principale">
-        <a href="#profil" data-i18n="nav.profile">Profil</a>
-        <a href="#parcours" data-i18n="nav.journey">Parcours</a>
-        <a href="#competences" data-i18n="nav.skills">Compétences</a>
-        <a href="#formations" data-i18n="nav.education">Formations</a>
+      <a href="#prologue" class="nav__logo" aria-label="Accueil"><span>MH</span></a>
+      <nav class="nav__links" aria-label="Navigation">
+        <a href="#histoire" data-i18n="nav.story">Histoire</a>
+        <a href="#terrain" data-i18n="nav.field">Terrain</a>
         <a href="#projets" data-i18n="nav.projects">Projets</a>
+        <a href="#competences" data-i18n="nav.skills">Compétences</a>
+        <a href="#humain" data-i18n="nav.human">Humain</a>
+        <a href="#formations" data-i18n="nav.education">Formations</a>
       </nav>
       <div class="nav__actions">
-        <button class="lang" id="langToggle" aria-label="Changer de langue / Switch language">
-          <span data-lang="fr">FR</span><span data-lang="en">EN</span>
+        <button class="icon-btn" id="termOpen" aria-label="Ouvrir le terminal" title="Terminal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-5-6-5M12 19h8"/></svg>
         </button>
-        <a href="#contact" class="btn btn--small btn--gold magnetic" data-i18n="nav.contact">Contact</a>
+        <button class="lang" id="langToggle" aria-label="Langue / Language"><span data-lang="fr">FR</span><span data-lang="en">EN</span></button>
+        <a href="#contact" class="btn btn--wine btn--sm" data-i18n="nav.contact">Contact</a>
         <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
     <div class="nav__mobile" id="mobileMenu">
-      <a href="#profil" data-i18n="nav.profile">Profil</a>
-      <a href="#parcours" data-i18n="nav.journey">Parcours</a>
-      <a href="#competences" data-i18n="nav.skills">Compétences</a>
-      <a href="#formations" data-i18n="nav.education">Formations</a>
+      <a href="#histoire" data-i18n="nav.story">Histoire</a>
+      <a href="#terrain" data-i18n="nav.field">Terrain</a>
       <a href="#projets" data-i18n="nav.projects">Projets</a>
+      <a href="#competences" data-i18n="nav.skills">Compétences</a>
+      <a href="#humain" data-i18n="nav.human">Humain</a>
+      <a href="#formations" data-i18n="nav.education">Formations</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
   </header>
 
-  <main id="top">
-    <!-- ========== HERO ========== -->
-    <section class="hero" id="hero">
-      <canvas class="hero__canvas" id="netCanvas" aria-hidden="true"></canvas>
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__content">
-        <p class="eyebrow hero__eyebrow reveal-up"><span class="dot"></span> <span data-i18n="hero.eyebrow">Wilmington, Delaware · Disponible pour de nouvelles opportunités</span></p>
-        <h1 class="hero__title">
-          <span class="line"><span class="word">Mariane</span></span>
-          <span class="line"><span class="word serif">Inès Norma</span></span>
-          <span class="line"><span class="word">Hounsou<span class="accent">.</span></span></span>
-        </h1>
-        <p class="hero__role reveal-up">
-          <span data-i18n="hero.role">Technicienne</span>
-          <span class="rotator" aria-live="polite"><span class="rotator__item" id="rotator">IT Support</span></span>
-        </p>
-        <div class="hero__cta reveal-up">
-          <a href="#parcours" class="btn btn--gold magnetic" data-i18n="hero.cta1">Découvrir mon parcours</a>
-          <a href="#contact" class="btn btn--ghost magnetic" data-i18n="hero.cta2">Me contacter</a>
-        </div>
-      </div>
-      <a href="#profil" class="scroll-hint" aria-label="Défiler">
-        <span class="scroll-hint__mouse"><span></span></span>
-      </a>
-    </section>
+  <!-- ===== Chapter dots ===== -->
+  <nav class="chapters" id="chapters" aria-label="Chapitres">
+    <a href="#prologue" data-label="Prologue"><i></i></a>
+    <a href="#histoire" data-label="01 · Origines" data-i18n-label="ch.1"><i></i></a>
+    <a href="#terrain" data-label="02 · Terrain" data-i18n-label="ch.2"><i></i></a>
+    <a href="#projets" data-label="03 · Projets" data-i18n-label="ch.3"><i></i></a>
+    <a href="#competences" data-label="04 · Compétences" data-i18n-label="ch.4"><i></i></a>
+    <a href="#humain" data-label="05 · Humain" data-i18n-label="ch.5"><i></i></a>
+    <a href="#formations" data-label="06 · Formations" data-i18n-label="ch.6"><i></i></a>
+    <a href="#objectifs" data-label="07 · La suite" data-i18n-label="ch.7"><i></i></a>
+    <a href="#contact" data-label="Épilogue" data-i18n-label="ch.8"><i></i></a>
+  </nav>
 
-    <!-- ========== STATEMENT (scroll highlight) ========== -->
-    <section class="statement" id="profil">
-      <div class="container">
-        <p class="eyebrow eyebrow--wine" data-i18n="profile.eyebrow">Profil</p>
-        <p class="statement__text" id="statement" data-i18n="profile.text">Je rends la technologie fiable, simple et humaine. Technicienne IT Support et Réseaux, j'installe, je configure et je dépanne — du poste de travail au routeur — pour que chaque utilisateur puisse se concentrer sur l'essentiel.</p>
-      </div>
-    </section>
-
-    <!-- ========== STATS ========== -->
-    <section class="stats">
-      <div class="container stats__grid">
-        <div class="stat reveal">
-          <span class="stat__num" data-count="3">0</span>
-          <span class="stat__label" data-i18n="stats.exp">expériences professionnelles en IT</span>
-        </div>
-        <div class="stat reveal">
-          <span class="stat__num" data-count="2">0</span>
-          <span class="stat__label" data-i18n="stats.countries">pays — Bénin &amp; États-Unis</span>
-        </div>
-        <div class="stat reveal">
-          <span class="stat__num" data-count="2">0</span>
-          <span class="stat__label" data-i18n="stats.degrees">diplômes universitaires — dont un en cours</span>
-        </div>
-        <div class="stat reveal">
-          <span class="stat__num" data-count="2">0</span>
-          <span class="stat__label" data-i18n="stats.langs">langues — Français &amp; Anglais</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== EXPERIENCE (horizontal pinned scroll) ========== -->
-    <section class="journey" id="parcours">
-      <div class="journey__sticky">
-        <div class="journey__head container">
-          <p class="eyebrow eyebrow--gold" data-i18n="journey.eyebrow">Parcours professionnel</p>
-          <h2 class="h2 h2--light"><span data-i18n="journey.title">Sur le terrain,</span> <em class="serif" data-i18n="journey.titleEm">au service des utilisateurs.</em></h2>
-        </div>
-        <div class="journey__track" id="journeyTrack">
-          <article class="xp-card">
-            <div class="xp-card__top">
-              <span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.current">En poste</span></span>
-              <span class="xp-card__date" data-i18n="xp1.date">Juin 2026 — Aujourd'hui</span>
-            </div>
-            <h3 class="xp-card__role" data-i18n="xp1.role">Associate Support Analyst — Stagiaire</h3>
-            <p class="xp-card__org">Berkley Technology Services (BTS)<span>Wilmington, DE · USA</span></p>
-            <ul class="xp-card__list">
-              <li data-i18n="xp1.b1">Support technique de premier niveau pour les utilisateurs en environnement corporate.</li>
-              <li data-i18n="xp1.b2">Suivi des incidents et gestion des tickets sous ServiceNow.</li>
-              <li data-i18n="xp1.b3">Support des applications Microsoft 365 — Outlook, Teams.</li>
-              <li data-i18n="xp1.b4">Résolution des problèmes d'accès, de mots de passe et de comptes.</li>
-              <li data-i18n="xp1.b5">Documentation des interventions selon les procédures ITSM.</li>
-            </ul>
-            <div class="chips">
-              <span>ServiceNow</span><span>Microsoft 365</span><span>Citrix</span><span>Tanium</span><span>Azure</span><span>Zscaler</span>
-            </div>
-            <span class="xp-card__index">01</span>
-          </article>
-
-          <article class="xp-card xp-card--gold">
-            <div class="xp-card__top">
-              <span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.current">En poste</span></span>
-              <span class="xp-card__date" data-i18n="xp2.date">Octobre 2024 — Aujourd'hui</span>
-            </div>
-            <h3 class="xp-card__role" data-i18n="xp2.role">IT Support</h3>
-            <p class="xp-card__org">Police Athletic League of Wilmington (PALW)<span>Wilmington, DE · USA</span></p>
-            <ul class="xp-card__list">
-              <li data-i18n="xp2.b1">Support sur site pour le personnel : matériel et connectivité réseau.</li>
-              <li data-i18n="xp2.b2">Installation et configuration de routeurs, points d'accès Wi-Fi et imprimantes.</li>
-              <li data-i18n="xp2.b3">Diagnostic des problèmes Internet et de performance système.</li>
-              <li data-i18n="xp2.b4">Mise en service de postes, installation Windows et configuration des sessions.</li>
-            </ul>
-            <div class="chips">
-              <span>Windows 10/11</span><span>Wi-Fi</span><span data-i18n="chips.routers">Routeurs</span><span data-i18n="chips.printers">Imprimantes</span>
-            </div>
-            <span class="xp-card__index">02</span>
-          </article>
-
-          <article class="xp-card xp-card--brown">
-            <div class="xp-card__top">
-              <span class="badge" data-i18n="common.internship">Stage</span>
-              <span class="xp-card__date" data-i18n="xp3.date">Juillet — Août 2022</span>
-            </div>
-            <h3 class="xp-card__role" data-i18n="xp3.role">Stagiaire Réseau</h3>
-            <p class="xp-card__org" data-i18n="xp3.org">Service de Promotion des TIC (SPTIC)<span>Calavi · Bénin</span></p>
-            <ul class="xp-card__list">
-              <li data-i18n="xp3.b1">Configuration de points d'accès Cisco et réinitialisation de routeurs MikroTik.</li>
-              <li data-i18n="xp3.b2">Participation au remplacement de fibre optique et aux diagnostics de connectivité.</li>
-              <li data-i18n="xp3.b3">Résolution d'incidents réseau locaux et distants aux côtés de techniciens seniors.</li>
-            </ul>
-            <div class="chips">
-              <span>Cisco</span><span>MikroTik</span><span data-i18n="chips.fiber">Fibre optique</span>
-            </div>
-            <span class="xp-card__index">03</span>
-          </article>
-
-          <article class="xp-card xp-card--outro">
-            <p class="serif xp-card__quote" data-i18n="journey.outro">« Chaque ticket résolu, c'est une personne qui peut de nouveau avancer. »</p>
-            <a href="#competences" class="btn btn--gold magnetic" data-i18n="journey.next">Voir mes compétences</a>
-          </article>
-        </div>
-        <div class="journey__bar container" aria-hidden="true"><span id="journeyBar"></span></div>
-      </div>
-    </section>
-
-    <!-- ========== SKILLS (bento) ========== -->
-    <section class="skills" id="competences">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow eyebrow--wine" data-i18n="skills.eyebrow">Compétences</p>
-          <h2 class="h2"><span data-i18n="skills.title">Une boîte à outils</span> <em class="serif" data-i18n="skills.titleEm">complète.</em></h2>
-        </div>
-
-        <div class="bento">
-          <div class="tile tile--net tile--wide reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-2.5h14V17"/></svg>
-            </div>
-            <h3 data-i18n="skills.net">Réseaux</h3>
-            <p data-i18n="skills.netText">Conception, configuration et dépannage de réseaux locaux et sans fil.</p>
-            <div class="chips chips--wine"><span>TCP/IP</span><span>DHCP</span><span>DNS</span><span>VLANs</span><span data-i18n="chips.cisco">Routeurs Cisco</span><span>Wi-Fi</span><span data-i18n="chips.nettest">Tests réseau</span></div>
-            <svg class="tile__deco" viewBox="0 0 200 120" aria-hidden="true">
-              <g class="deco-lines"><path d="M20 90 L70 40 L120 80 L180 30"/><path d="M70 40 L110 20 L180 30"/><path d="M20 90 L120 80"/></g>
-              <g class="deco-nodes"><circle cx="20" cy="90" r="5"/><circle cx="70" cy="40" r="6"/><circle cx="120" cy="80" r="5"/><circle cx="180" cy="30" r="7"/><circle cx="110" cy="20" r="4"/></g>
-            </svg>
-          </div>
-
-          <div class="tile tile--sys tile--tall reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h3 data-i18n="skills.sys">Systèmes &amp; logiciels</h3>
-            <ul class="tile__list">
-              <li>Windows 10 / 11</li>
-              <li>Microsoft 365</li>
-              <li data-i18n="skills.ad">Active Directory — comptes &amp; mots de passe</li>
-              <li>Exchange &amp; Teams</li>
-              <li>Zoom</li>
-            </ul>
-          </div>
-
-          <div class="tile tile--hw reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>
-            </div>
-            <h3 data-i18n="skills.hw">Matériel</h3>
-            <p data-i18n="skills.hwText">Imprimantes, scanners, routeurs, switches, PC, tablettes et mobiles.</p>
-          </div>
-
-          <div class="tile tile--ent tile--wide reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12a3.5 3.5 0 0 0 1 7z"/></svg>
-            </div>
-            <h3 data-i18n="skills.ent">Environnement entreprise</h3>
-            <p data-i18n="skills.entText">Outils utilisés au quotidien pour sécuriser et gérer les postes utilisateurs.</p>
-            <div class="logo-row">
-              <span>Citrix Workspace</span><span>Tanium</span><span>Azure</span><span>Zscaler</span><span>ServiceNow</span>
-            </div>
-          </div>
-
-          <div class="tile tile--tools reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
-            </div>
-            <h3 data-i18n="skills.tools">Outils</h3>
-            <p>Packet Tracer · GNS3 · ServiceNow · Microsoft Office</p>
-          </div>
-
-          <div class="tile tile--support tile--wide tile--half reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg>
-            </div>
-            <h3 data-i18n="skills.support">Support utilisateur</h3>
-            <p data-i18n="skills.supportText">Support de niveau 1 : diagnostic, résolution et documentation des incidents selon les procédures ITSM.</p>
-            <div class="chips"><span>ServiceNow</span><span>ITSM</span><span data-i18n="chips.ticketing">Gestion des tickets</span><span>Documentation</span></div>
-          </div>
-
-          <div class="tile tile--lang tile--wide reveal">
-            <div class="tile__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-            </div>
-            <h3 data-i18n="skills.langs">Langues</h3>
-            <div class="lang-bars">
-              <div><span data-i18n="skills.fr">Français</span><i style="--w:100%"></i></div>
-              <div><span data-i18n="skills.en">Anglais</span><i style="--w:88%"></i></div>
-            </div>
+  <main>
+    <!-- =====================================================
+         PROLOGUE
+         ===================================================== -->
+    <section class="prologue" id="prologue" data-theme="light">
+      <div class="blob blob--wine" aria-hidden="true"></div>
+      <div class="blob blob--gold" aria-hidden="true"></div>
+      <div class="container prologue__grid">
+        <div class="prologue__text">
+          <p class="kicker"><span class="live"></span><span data-i18n="pro.kicker">Prologue · Wilmington, Delaware</span></p>
+          <h1 class="prologue__title">
+            <span class="ln"><span data-i18n="pro.hello">Bonjour, je suis</span></span>
+            <span class="ln"><em class="serif shine">Mariane.</em></span>
+          </h1>
+          <p class="prologue__lead" data-i18n="pro.lead">Technicienne <strong>IT Support &amp; Réseaux</strong>. Je fais en sorte que la technologie fonctionne — pour que les gens, eux, puissent avancer.</p>
+          <div class="prologue__cta">
+            <a href="#histoire" class="btn btn--wine" data-i18n="pro.cta1">Lire mon histoire</a>
+            <button class="btn btn--line" id="ctaTerminal" data-i18n="pro.cta2">Ouvrir le terminal ›_</button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ========== SOFT SKILLS MARQUEE ========== -->
-    <section class="marquee" aria-label="Savoir-être">
-      <div class="marquee__row">
-        <div class="marquee__track" data-i18n="soft.row1">
-          <span>Résolution de problèmes</span><b>✦</b><span>Travail d'équipe</span><b>✦</b><span>Service client</span><b>✦</b><span>Adaptabilité</span><b>✦</b><span>Gestion du temps</span><b>✦</b><span>Communication</span><b>✦</b>
-        </div>
-      </div>
-      <div class="marquee__row marquee__row--reverse">
-        <div class="marquee__track marquee__track--outline" data-i18n="soft.row2">
-          <span>Écoute</span><b>✦</b><span>Rigueur</span><b>✦</b><span>Curiosité</span><b>✦</b><span>Patience</span><b>✦</b><span>Pédagogie</span><b>✦</b><span>Fiabilité</span><b>✦</b>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== EDUCATION (stacked sticky cards) ========== -->
-    <section class="education" id="formations">
-      <div class="container education__layout">
-        <div class="education__intro">
-          <p class="eyebrow eyebrow--wine" data-i18n="edu.eyebrow">Formations</p>
-          <h2 class="h2"><span data-i18n="edu.title">Apprendre,</span> <em class="serif" data-i18n="edu.titleEm">de Cotonou à Wilmington.</em></h2>
-          <p class="lead" data-i18n="edu.lead">Une base solide en administration réseau, enrichie par l'informatique, le design et la cybersécurité.</p>
-        </div>
-        <div class="stack" id="stack">
-          <article class="stack__card stack__card--wine">
-            <div class="stack__meta"><span class="badge badge--live"><span class="pulse"></span><span data-i18n="common.ongoing">En cours</span></span><span>USA</span></div>
-            <h3 data-i18n="edu1.title">Bachelor of Science en Informatique</h3>
-            <p class="stack__school">Wilmington University · Delaware</p>
-            <p data-i18n="edu1.text">Approfondissement de l'informatique : programmation, systèmes, réseaux et sécurité.</p>
-            <span class="stack__big">B.Sc.</span>
-          </article>
-          <article class="stack__card stack__card--brown">
-            <div class="stack__meta"><span class="badge" data-i18n="common.graduated">Diplômée · 2023</span><span data-i18n="common.benin">Bénin</span></div>
-            <h3 data-i18n="edu2.title">Licence en Administration Réseaux</h3>
-            <p class="stack__school">ENEAM · Cotonou</p>
-            <p data-i18n="edu2.text">Architecture et administration des réseaux, protocoles, équipements d'interconnexion.</p>
-            <span class="stack__big">2023</span>
-          </article>
-          <article class="stack__card stack__card--gold">
-            <div class="stack__meta"><span class="badge" data-i18n="common.training22">Formation · 2022</span><span data-i18n="common.benin">Bénin</span></div>
-            <h3 data-i18n="edu3.title">UI/UX Design</h3>
-            <p class="stack__school">EIG Bénin</p>
-            <p data-i18n="edu3.text">Conception d'interfaces centrées sur l'utilisateur — un atout pour comprendre ceux que l'on accompagne.</p>
-            <span class="stack__big">UX</span>
-          </article>
-          <article class="stack__card stack__card--ink">
-            <div class="stack__meta"><span class="badge" data-i18n="common.training22">Formation · 2022</span><span data-i18n="common.benin">Bénin</span></div>
-            <h3 data-i18n="edu4.title">Ethical Hacking</h3>
-            <p class="stack__school">AEI-Synergie</p>
-            <p data-i18n="edu4.text">Initiation à la sécurité offensive pour mieux protéger les systèmes et les utilisateurs.</p>
-            <span class="stack__big">Sec</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CERTIFICATIONS ========== -->
-    <section class="certs">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--gold" data-i18n="certs.eyebrow">Certifications</p>
-          <h2 class="h2 h2--light"><span data-i18n="certs.title">Toujours</span> <em class="serif" data-i18n="certs.titleEm">en progression.</em></h2>
-        </div>
-        <div class="certs__grid">
-          <div class="cert tilt reveal">
-            <div class="cert__ring" style="--p:100"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>G</span></div>
-            <h3>Google IT Support</h3>
-            <p class="cert__status cert__status--done" data-i18n="certs.done">Obtenue</p>
-          </div>
-          <div class="cert tilt reveal">
-            <div class="cert__ring" style="--p:60"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>CCNA</span></div>
-            <h3>Cisco Certified Network Associate</h3>
-            <p class="cert__status cert__status--progress" data-i18n="certs.progress">En cours</p>
-          </div>
-          <div class="cert tilt reveal">
-            <div class="cert__ring" style="--p:15"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52"/><circle class="ring" cx="60" cy="60" r="52"/></svg><span>A+</span></div>
-            <h3>CompTIA A+</h3>
-            <p class="cert__status cert__status--planned" data-i18n="certs.planned">Prévue</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PROJECTS ========== -->
-    <section class="projects" id="projets">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow eyebrow--wine" data-i18n="projects.eyebrow">Projets &amp; réalisations</p>
-          <h2 class="h2"><span data-i18n="projects.title">Ce que j'ai</span> <em class="serif" data-i18n="projects.titleEm">construit.</em></h2>
-        </div>
-
-        <div class="projects__list">
-          <article class="project reveal">
-            <div class="project__visual project__visual--wifi">
-              <div class="waves"><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="project__body">
-              <span class="project__tag">PALW · 2024 — <span data-i18n="common.today">aujourd'hui</span></span>
-              <h3 data-i18n="p1.title">Infrastructure Wi-Fi &amp; postes de travail</h3>
-              <p data-i18n="p1.text">Installation et configuration des routeurs, points d'accès Wi-Fi et imprimantes, mise en service des postes Windows et des sessions utilisateurs pour une association de Wilmington.</p>
-              <div class="chips"><span>Wi-Fi</span><span>Windows</span><span data-i18n="chips.printers">Imprimantes</span></div>
-            </div>
-          </article>
-
-          <article class="project project--reverse reveal">
-            <div class="project__visual project__visual--lab">
-              <svg viewBox="0 0 300 200" aria-hidden="true">
-                <g class="lab-links"><path d="M150 40 L70 110"/><path d="M150 40 L230 110"/><path d="M70 110 L40 170"/><path d="M70 110 L110 170"/><path d="M230 110 L190 170"/><path d="M230 110 L260 170"/><path d="M70 110 L230 110"/></g>
-                <g class="lab-nodes"><rect x="130" y="25" width="40" height="30" rx="6"/><rect x="50" y="95" width="40" height="30" rx="6"/><rect x="210" y="95" width="40" height="30" rx="6"/><circle cx="40" cy="170" r="11"/><circle cx="110" cy="170" r="11"/><circle cx="190" cy="170" r="11"/><circle cx="260" cy="170" r="11"/></g>
-                <circle class="packet" r="4"><animateMotion dur="3s" repeatCount="indefinite" path="M40 170 L70 110 L150 40 L230 110 L260 170"/></circle>
-                <circle class="packet packet--2" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" path="M190 170 L230 110 L70 110 L110 170"/></circle>
-              </svg>
-            </div>
-            <div class="project__body">
-              <span class="project__tag" data-i18n="p2.tag">Labs CCNA · en cours</span>
-              <h3 data-i18n="p2.title">Labs réseau Cisco</h3>
-              <p data-i18n="p2.text">Simulation de topologies dans Packet Tracer et GNS3 : VLANs, adressage IP, DHCP, DNS et routage Cisco — la préparation pratique à la certification CCNA.</p>
-              <div class="chips"><span>Packet Tracer</span><span>GNS3</span><span>VLANs</span><span>Cisco IOS</span></div>
-            </div>
-          </article>
-
-          <article class="project reveal">
-            <div class="project__visual project__visual--ticket">
-              <div class="tickets">
-                <div class="ticket"><b>INC-1042</b><span data-i18n="p3.t1">Réinitialisation mot de passe</span><em data-i18n="p3.resolved">Résolu</em></div>
-                <div class="ticket"><b>INC-1043</b><span data-i18n="p3.t2">Accès Outlook / Teams</span><em data-i18n="p3.resolved">Résolu</em></div>
-                <div class="ticket"><b>INC-1044</b><span data-i18n="p3.t3">Connexion Citrix</span><em data-i18n="p3.resolved">Résolu</em></div>
-              </div>
-            </div>
-            <div class="project__body">
-              <span class="project__tag">BTS · 2026</span>
-              <h3 data-i18n="p3.title">Support utilisateurs en entreprise</h3>
-              <p data-i18n="p3.text">Traitement des incidents de bout en bout dans ServiceNow : diagnostic, résolution, documentation. Accompagnement des utilisateurs sur Microsoft 365 et les outils sécurisés de l'entreprise.</p>
-              <div class="chips"><span>ServiceNow</span><span>ITSM</span><span>Microsoft 365</span></div>
-            </div>
-          </article>
-
-          <article class="project project--reverse reveal">
-            <div class="project__visual project__visual--fiber">
-              <div class="fiber"><i></i><i></i><i></i><i></i><i></i></div>
-            </div>
-            <div class="project__body">
-              <span class="project__tag">SPTIC · 2022</span>
-              <h3 data-i18n="p4.title">Fibre optique &amp; points d'accès</h3>
-              <p data-i18n="p4.text">Participation au remplacement de liaisons fibre, à la configuration de points d'accès Cisco et à la remise en service de routeurs MikroTik au Bénin.</p>
-              <div class="chips"><span data-i18n="chips.fiber">Fibre optique</span><span>Cisco</span><span>MikroTik</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="contact" id="contact">
-      <div class="contact__glow" aria-hidden="true"></div>
-      <div class="container contact__inner">
-        <p class="eyebrow eyebrow--gold" data-i18n="contact.eyebrow">Contact</p>
-        <h2 class="contact__title"><span data-i18n="contact.title">Travaillons</span><br><em class="serif" data-i18n="contact.titleEm">ensemble.</em></h2>
-        <p class="lead lead--light" data-i18n="contact.lead">Une opportunité, une question ou simplement envie d'échanger ? Mon inbox est ouverte.</p>
-        <a href="mailto:hounsounorma@gmail.com" class="contact__mail magnetic">hounsounorma@gmail.com
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
-        </a>
-        <div class="contact__cards">
-          <button class="contact__card" id="copyMail" type="button">
-            <span class="contact__label" data-i18n="contact.email">E-mail</span>
-            <span class="contact__value">hounsounorma@gmail.com</span>
-            <span class="contact__hint" data-i18n="contact.copy">Cliquer pour copier</span>
+        <div class="badge-wrap">
+          <div class="lanyard" aria-hidden="true"></div>
+          <button class="badge" id="badge" aria-label="Retourner le badge">
+            <span class="badge__face badge__front">
+              <span class="badge__clip"></span>
+              <span class="badge__top"><span class="badge__org">IT · SUPPORT</span><span class="badge__chip"></span></span>
+              <span class="badge__avatar">MH</span>
+              <span class="badge__name">Mariane Inès Norma<br><b>Hounsou</b></span>
+              <span class="badge__role" data-i18n="badge.role">Technicienne IT Support &amp; Réseaux</span>
+              <span class="badge__foot"><span>ID · 2026</span><span class="badge__ok" data-i18n="badge.ok">● Accès autorisé</span></span>
+              <span class="badge__shine"></span>
+            </span>
+            <span class="badge__face badge__back">
+              <span class="badge__clip"></span>
+              <span class="badge__qr" id="qr"></span>
+              <span class="badge__backtitle" data-i18n="badge.back">Langues</span>
+              <span class="badge__backval">Français · English</span>
+              <span class="badge__backtitle" data-i18n="badge.base">Base</span>
+              <span class="badge__backval">Wilmington, DE · USA</span>
+              <span class="badge__backtitle" data-i18n="badge.origin">Origine</span>
+              <span class="badge__backval" data-i18n="badge.originVal">Cotonou · Bénin</span>
+              <span class="badge__shine"></span>
+            </span>
           </button>
-          <div class="contact__card">
-            <span class="contact__label" data-i18n="contact.location">Localisation</span>
-            <span class="contact__value">Wilmington, Delaware</span>
-            <span class="contact__hint" data-i18n="contact.country">États-Unis</span>
-          </div>
-          <div class="contact__card">
-            <span class="contact__label" data-i18n="contact.langs">Langues</span>
-            <span class="contact__value" data-i18n="contact.langsVal">Français · Anglais</span>
-            <span class="contact__hint" data-i18n="contact.bilingual">Bilingue</span>
+          <p class="hint" data-i18n="badge.hint">↻ Cliquez sur le badge</p>
+        </div>
+      </div>
+      <a href="#manifeste" class="scroll-cue" aria-label="Défiler"><span></span></a>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto" id="manifeste" data-theme="light">
+      <div class="container">
+        <p class="manifesto__text" id="manifesto" data-i18n="man.text">Derrière chaque écran, il y a une personne. Derrière chaque panne, une journée qui s'arrête. Mon métier, c'est de la remettre en marche.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         01 — ORIGINES (scrollytelling)
+         ===================================================== -->
+    <section class="story" id="histoire" data-theme="dark">
+      <div class="container story__grid">
+        <div class="story__visual">
+          <div class="map" id="map" data-step="0">
+            <svg viewBox="0 0 600 420" class="map__svg" aria-hidden="true">
+              <defs>
+                <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3"/></pattern>
+                <linearGradient id="arcGrad" x1="0" x2="1"><stop offset="0" stop-color="#ffd58c"/><stop offset="1" stop-color="#e2486c"/></linearGradient>
+              </defs>
+              <!-- stylised continents -->
+              <path class="land" d="M40 70 Q110 30 190 60 Q230 80 215 130 Q200 170 160 190 Q140 230 120 250 Q90 220 80 180 Q50 150 40 110 Z"/>
+              <path class="land" d="M330 90 Q380 60 430 80 Q470 100 455 140 Q500 170 480 230 Q460 300 420 340 Q390 360 380 320 Q370 270 340 240 Q300 220 305 170 Q300 120 330 90 Z"/>
+              <path class="map__arc-bg" d="M150 140 Q290 -10 395 225"/>
+              <path class="map__arc" id="mapArc" d="M150 140 Q290 -10 395 225"/>
+              <g class="pin pin--us"><circle class="pin__pulse" cx="150" cy="140" r="8"/><circle class="pin__dot" cx="150" cy="140" r="7"/></g>
+              <g class="pin pin--bj"><circle class="pin__pulse" cx="395" cy="225" r="8"/><circle class="pin__dot" cx="395" cy="225" r="7"/></g>
+              <circle class="map__plane" id="mapPlane" r="6" cx="395" cy="225"/>
+            </svg>
+            <div class="map__label map__label--us"><b>Wilmington</b><span>Delaware · USA</span></div>
+            <div class="map__label map__label--bj"><b>Cotonou</b><span data-i18n="map.bj">Bénin</span></div>
+            <div class="map__caption"><span class="mono" id="mapCaption">01 / 03</span></div>
           </div>
         </div>
+        <div class="story__steps">
+          <header class="chapter-head">
+            <p class="chapter-num">01</p>
+            <h2 class="chapter-title"><span data-i18n="s.title">Les</span> <em class="serif" data-i18n="s.titleEm">origines.</em></h2>
+          </header>
+          <article class="story-step" data-step="0">
+            <p class="story-step__tag">Cotonou · <span data-i18n="map.bj">Bénin</span></p>
+            <h3 data-i18n="s1.title">Tout commence par les réseaux.</h3>
+            <p data-i18n="s1.text">Licence en Administration Réseaux à l'ENEAM. En 2022, premier stage au SPTIC à Calavi : points d'accès Cisco, routeurs MikroTik, remplacement de fibre optique. Le terrain devient une évidence.</p>
+          </article>
+          <article class="story-step" data-step="1">
+            <p class="story-step__tag" data-i18n="s2.tag">2022 · Élargir l'horizon</p>
+            <h3 data-i18n="s2.title">Comprendre l'humain, protéger la machine.</h3>
+            <p data-i18n="s2.text">En parallèle, je me forme au UI/UX Design et à l'Ethical Hacking. Deux angles qui changent tout : se mettre à la place de l'utilisateur, et penser comme celui qui attaque pour mieux défendre.</p>
+          </article>
+          <article class="story-step" data-step="2">
+            <p class="story-step__tag">Wilmington · Delaware</p>
+            <h3 data-i18n="s3.title">Nouveau pays, même passion.</h3>
+            <p data-i18n="s3.text">Une nouvelle vie, une nouvelle langue de travail. IT Support à la Police Athletic League depuis 2024, Associate Support Analyst chez Berkley Technology Services en 2026 — et un Bachelor en Informatique en cours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         02 — TERRAIN
+         ===================================================== -->
+    <section class="field" id="terrain" data-theme="dark">
+      <div class="container">
+        <header class="chapter-head chapter-head--center">
+          <p class="chapter-num">02</p>
+          <h2 class="chapter-title"><span data-i18n="f.title">Sur le</span> <em class="serif" data-i18n="f.titleEm">terrain.</em></h2>
+          <p class="chapter-lead" data-i18n="f.lead">Trois postes, un même fil rouge : être là quand la technologie lâche.</p>
+        </header>
+
+        <div class="segmented" id="xpTabs" role="tablist">
+          <span class="segmented__pill"></span>
+          <button role="tab" class="is-active" data-xp="0">BTS</button>
+          <button role="tab" data-xp="1">PALW</button>
+          <button role="tab" data-xp="2">SPTIC</button>
+        </div>
+
+        <div class="xp" id="xpPanel" aria-live="polite"></div>
+
+        <!-- Ticket simulator -->
+        <div class="sim">
+          <div class="sim__head">
+            <div>
+              <p class="kicker kicker--gold" data-i18n="sim.kicker">Une journée type · Simulation interactive</p>
+              <h3 class="sim__title" data-i18n="sim.title">À vous de jouer : résolvez les tickets.</h3>
+            </div>
+            <div class="sim__score"><span id="simScore">0</span><small>/3</small><em data-i18n="sim.solved">résolus</em></div>
+          </div>
+          <div class="sim__grid" id="simGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         03 — PROJETS
+         ===================================================== -->
+    <section class="projects" id="projets" data-theme="light">
+      <div class="container">
+        <header class="chapter-head">
+          <p class="chapter-num">03</p>
+          <h2 class="chapter-title"><span data-i18n="p.title">Ce que j'ai</span> <em class="serif" data-i18n="p.titleEm">construit.</em></h2>
+          <p class="chapter-lead" data-i18n="p.lead">Chaque projet est une histoire : un besoin, une action, un résultat. Cliquez pour l'ouvrir.</p>
+        </header>
+        <div class="proj-grid" id="projGrid"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         04 — COMPETENCES
+         ===================================================== -->
+    <section class="skills" id="competences" data-theme="light">
+      <div class="container">
+        <header class="chapter-head">
+          <p class="chapter-num">04</p>
+          <h2 class="chapter-title"><span data-i18n="k.title">La boîte</span> <em class="serif" data-i18n="k.titleEm">à outils.</em></h2>
+          <p class="chapter-lead" data-i18n="k.lead">Choisissez un domaine, puis cliquez sur une carte pour découvrir comment j'utilise chaque compétence.</p>
+        </header>
+        <div class="filters" id="skillTabs" role="tablist"></div>
+        <div class="skill-grid" id="skillGrid"></div>
+      </div>
+    </section>
+
+    <!-- Interlude marquee -->
+    <section class="ribbon" aria-hidden="true">
+      <div class="ribbon__track" id="ribbon"></div>
+    </section>
+
+    <!-- =====================================================
+         05 — HUMAIN (soft skills)
+         ===================================================== -->
+    <section class="human" id="humain" data-theme="light">
+      <div class="container">
+        <header class="chapter-head chapter-head--split">
+          <div>
+            <p class="chapter-num">05</p>
+            <h2 class="chapter-title"><span data-i18n="h.title">L'humain</span> <em class="serif" data-i18n="h.titleEm">derrière l'écran.</em></h2>
+          </div>
+          <p class="chapter-lead" data-i18n="h.lead">La technique résout le problème. L'écoute résout la situation. Retournez les cartes pour voir mon approche.</p>
+        </header>
+        <div class="soft-grid" id="softGrid"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         06 — FORMATIONS (draggable)
+         ===================================================== -->
+    <section class="edu" id="formations" data-theme="dark">
+      <div class="container">
+        <header class="chapter-head chapter-head--split">
+          <div>
+            <p class="chapter-num">06</p>
+            <h2 class="chapter-title"><span data-i18n="e.title">Apprendre,</span> <em class="serif" data-i18n="e.titleEm">sans cesse.</em></h2>
+          </div>
+          <div class="edu__ctrl">
+            <p class="chapter-lead" data-i18n="e.lead">De Cotonou à Wilmington. Faites glisser pour parcourir.</p>
+            <div class="arrows">
+              <button class="arrow" id="eduPrev" aria-label="Précédent">←</button>
+              <button class="arrow" id="eduNext" aria-label="Suivant">→</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="rail" id="rail">
+        <div class="rail__track" id="railTrack">
+          <article class="edu-card edu-card--wine">
+            <span class="edu-card__big serif">B.Sc.</span>
+            <div class="edu-card__meta"><span class="tag tag--live" data-i18n="c.ongoing">En cours</span><span>USA</span></div>
+            <h3 data-i18n="e1.title">Bachelor of Science en Informatique</h3>
+            <p class="edu-card__school">Wilmington University · Delaware</p>
+            <p data-i18n="e1.text">Programmation, systèmes, réseaux, sécurité : consolider la théorie derrière la pratique du terrain.</p>
+          </article>
+          <article class="edu-card edu-card--brown">
+            <span class="edu-card__big serif">2023</span>
+            <div class="edu-card__meta"><span class="tag" data-i18n="c.grad">Diplômée</span><span data-i18n="map.bj">Bénin</span></div>
+            <h3 data-i18n="e2.title">Licence en Administration Réseaux</h3>
+            <p class="edu-card__school">ENEAM · Cotonou</p>
+            <p data-i18n="e2.text">Architecture réseau, protocoles, équipements d'interconnexion. Les fondations de tout le reste.</p>
+          </article>
+          <article class="edu-card edu-card--gold">
+            <span class="edu-card__big serif">UX</span>
+            <div class="edu-card__meta"><span class="tag" data-i18n="c.training">Formation · 2022</span><span data-i18n="map.bj">Bénin</span></div>
+            <h3>UI/UX Design</h3>
+            <p class="edu-card__school">EIG Bénin</p>
+            <p data-i18n="e3.text">Concevoir pour l'utilisateur. Une façon de penser que j'applique à chaque échange de support.</p>
+          </article>
+          <article class="edu-card edu-card--ink">
+            <span class="edu-card__big serif">Sec</span>
+            <div class="edu-card__meta"><span class="tag" data-i18n="c.training">Formation · 2022</span><span data-i18n="map.bj">Bénin</span></div>
+            <h3>Ethical Hacking</h3>
+            <p class="edu-card__school">AEI-Synergie</p>
+            <p data-i18n="e4.text">Comprendre les attaques pour mieux protéger les systèmes — et sensibiliser les utilisateurs.</p>
+          </article>
+          <article class="edu-card edu-card--cert">
+            <span class="edu-card__big serif">G</span>
+            <div class="edu-card__meta"><span class="tag tag--ok" data-i18n="c.earned">Obtenue</span><span>Google</span></div>
+            <h3>Google IT Support</h3>
+            <p class="edu-card__school" data-i18n="e5.school">Certificat professionnel</p>
+            <p data-i18n="e5.text">Support technique, réseaux, systèmes d'exploitation, administration et sécurité informatique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         07 — LA SUITE (goals)
+         ===================================================== -->
+    <section class="goals" id="objectifs" data-theme="dark">
+      <div class="container">
+        <header class="chapter-head chapter-head--center">
+          <p class="chapter-num">07</p>
+          <h2 class="chapter-title"><span data-i18n="g.title">La</span> <em class="serif" data-i18n="g.titleEm">suite.</em></h2>
+          <p class="chapter-lead" data-i18n="g.lead">L'histoire ne fait que commencer. Cliquez sur un objectif.</p>
+        </header>
+        <div class="goal-grid" id="goalGrid"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         EPILOGUE — CONTACT
+         ===================================================== -->
+    <section class="contact" id="contact" data-theme="dark">
+      <div class="contact__aurora" aria-hidden="true"></div>
+      <div class="container contact__grid">
+        <div>
+          <p class="chapter-num" data-i18n="ct.num">Épilogue</p>
+          <h2 class="contact__title"><span data-i18n="ct.title">Écrivons la suite</span> <em class="serif" data-i18n="ct.titleEm">ensemble.</em></h2>
+          <p class="chapter-lead" data-i18n="ct.lead">Une opportunité, un projet, une question ? Composez votre message, il s'ouvrira directement dans votre messagerie.</p>
+          <div class="contact__info">
+            <button class="info-card" id="copyMail" type="button">
+              <span class="info-card__label" data-i18n="ct.email">E-mail</span>
+              <span class="info-card__value">hounsounorma@gmail.com</span>
+              <span class="info-card__hint" data-i18n="ct.copy">Cliquer pour copier</span>
+            </button>
+            <div class="info-card">
+              <span class="info-card__label" data-i18n="ct.where">Localisation</span>
+              <span class="info-card__value">Wilmington, DE</span>
+              <span class="info-card__hint" data-i18n="ct.country">États-Unis</span>
+            </div>
+          </div>
+        </div>
+        <form class="composer" id="composer" novalidate>
+          <div class="composer__bar"><i></i><i></i><i></i><span data-i18n="ct.new">Nouveau message</span></div>
+          <label class="field-row"><span data-i18n="ct.to">À</span><input type="text" value="hounsounorma@gmail.com" readonly tabindex="-1"></label>
+          <label class="field-row"><span data-i18n="ct.from">De</span><input type="text" name="name" data-i18n-ph="ct.fromPh" placeholder="Votre nom" autocomplete="name"></label>
+          <label class="field-row"><span data-i18n="ct.subject">Objet</span><input type="text" name="subject" data-i18n-ph="ct.subjectPh" placeholder="Opportunité IT Support"></label>
+          <div class="chips-pick" id="subjectChips"></div>
+          <textarea name="message" rows="5" data-i18n-ph="ct.msgPh" placeholder="Bonjour Mariane, …"></textarea>
+          <button class="btn btn--gold composer__send" type="submit"><span data-i18n="ct.send">Envoyer</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+          </button>
+        </form>
       </div>
     </section>
   </main>
@@ -450,9 +383,29 @@
   <footer class="footer">
     <div class="container footer__inner">
       <span>© <span id="year">2026</span> Mariane Inès Norma Hounsou</span>
-      <a href="#top" class="footer__top" data-i18n="footer.top">Retour en haut ↑</a>
+      <span class="footer__egg" data-i18n="foot.egg">Astuce : tapez « help » dans le terminal ›_</span>
+      <a href="#prologue" data-i18n="foot.top">Retour en haut ↑</a>
     </div>
   </footer>
+
+  <!-- ===== Project modal ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" data-close aria-label="Fermer">✕</button>
+      <div class="modal__visual" id="modalVisual"></div>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== Terminal ===== -->
+  <div class="term" id="term" aria-hidden="true">
+    <div class="term__win" role="dialog" aria-label="Terminal">
+      <div class="term__bar"><button data-term-close aria-label="Fermer"></button><i></i><i></i><span>mariane — zsh</span></div>
+      <div class="term__out" id="termOut"></div>
+      <form class="term__in" id="termForm"><span class="term__prompt">mariane@profil:~$</span><input id="termInput" autocomplete="off" spellcheck="false" aria-label="Commande"></form>
+    </div>
+  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
